@@ -1,0 +1,67 @@
+/* main
+*******************************************************************/
+
+.current-time {
+    display: inline-block;
+    border: 1px solid $gray-400;
+    padding: 10px 16px 14px;
+    border-radius: 4px;
+    font-size: 18px;
+    margin-bottom: 40px;
+    small {
+        display: block;
+        opacity: .6;
+        font-size: 14px;
+    }
+}
+
+.time-block {
+    background: $white;
+    border: 2px solid $gray-200;
+    color: $gray-500;
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+    &.time-block-available {
+        background-color: $app-color-1;
+        border: 0;
+        box-shadow: 0 0 8px 4px rgba($black, .1) inset;
+        color: $white;
+    }
+    .time-block-current-time {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba($app-color-3,.8);
+    }
+    .time-block-busy {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba($app-color-2,.7);
+    }
+    .time-block-body {
+        padding: 10px 8px 8px;
+        position: relative;
+        z-index: 2;
+        &::after {
+            content: attr(data-time);
+            position: absolute;
+            top: 6px;
+            left: 8px;
+            opacity: .6;
+            font-size: 12px;
+        }
+        small {
+            display: block;
+            font-size: 14px;
+            opacity: .8;
+        }
+    }
+}

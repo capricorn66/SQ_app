@@ -1,0 +1,141 @@
+/* buttons
+*******************************************************************/
+
+.btn-primary {
+    background: $gray-600;
+    border: 1px solid $gray-600;
+    color: white;
+    &:active,
+    &:focus,
+    &:hover {
+        background: $gray-800;
+        border: 1px solid $gray-800;
+        box-shadow: none;
+        color: white;
+    }
+    &.active {
+        background: $app-color-2 !important;
+        border: 1px solid $app-color-2 !important;
+    }
+}
+
+.btn-secondary {
+    background: $app-color-4;
+    border: 1px solid $app-color-4;
+    color: white;
+    &:active,
+    &:focus,
+    &:hover {
+        background: darken($app-color-4, 8%);
+        border: 1px solid darken($app-color-4, 8%);
+        box-shadow: none;
+        color: white;
+    }
+}
+
+.btn-dark {
+    background: $app-color-3;
+    border: 1px solid $app-color-3;
+    color: white;
+    white-space: nowrap;
+    &:active,
+    &:focus,
+    &:hover {
+        background: darken($app-color-3, 8%);
+        border: 1px solid darken($app-color-3, 8%);
+        box-shadow: none;
+        color: white;
+    }
+}
+
+.btn-collapse {
+    background: rgba($gray-400,.5);
+    padding: 8px 56px 9px 8px;
+    line-height: 1.2em;
+    height: 36px;
+    display: block;
+    color: $gray-600;
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    text-shadow: 1px 1px rgba(white,.4);
+    .score {
+        background: $app-color-1;
+        color: $white;
+        display: inline-block;
+        padding: 0 6px 0 5px;
+        border-radius: 12px;
+        position: absolute;
+        font-weight: 400;
+        font-size: 10px;
+        right: 28px;
+        top: 50%;
+        margin-top: -10px;
+        min-width: 20px;
+        height: 20px;
+        text-align: center;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    &:active,
+    &:focus,
+    &:hover {
+        box-shadow: none;
+        color: $gray-600;
+        text-decoration: none;
+    }
+    &::after {
+        font-family: 'icomoon' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        display: inline-block;
+        vertical-align: middle;
+        content: "\e902";
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        margin-top: -5px;
+        font-size: 10px;
+    }
+    &[aria-expanded="true"] {
+        &::after {
+            content: "\e901";
+        }
+    }
+}
+
+.btn {
+    padding: 0 16px 1px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all linear .2s;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 46px;
+    &.btn-sm {
+        border-radius: 8px;
+        padding: 0 8px 1px;
+        height: 26px;
+    }
+    &.btn-md {
+        height: 40px;
+    }
+    &.btn-lg {
+        height: 56px;
+    }
+    &:focus,
+    &:hover {
+        text-decoration: none !important;
+    }
+}

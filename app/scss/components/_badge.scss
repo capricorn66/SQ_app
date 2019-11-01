@@ -1,0 +1,23 @@
+/* badge
+*******************************************************************/
+
+.badge {
+    font-weight: 400;
+    font-size: 12px;
+    padding: 0 8px 1px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 22px;
+    &.badge-blue {
+        background-color: $app-color-2;
+        color: $white;
+    }
+    &.badge-gray {
+        background-color: $gray-600;
+        color: $white;
+    }
+}

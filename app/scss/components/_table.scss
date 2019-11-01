@@ -1,0 +1,120 @@
+/* table
+*******************************************************************/
+
+.table-responssive {
+    width: 100vw;
+    overflow-x: auto;
+}
+
+table {
+   font-size: 16px;
+   min-width: 100%;
+   th, td {
+       width: 50%;
+       padding: 8px;
+       border-bottom: 1px solid $gray-300;
+       vertical-align: top;
+   }
+   th {
+        text-align: right;
+        font-size: 13px;
+   }
+    &.table-panel {
+        th, td {
+            border-bottom: 0;
+            border-right: 1px solid $gray-300;
+            &:last-child {
+                border-right: 0;
+            }
+        }
+        table-layout: fixed;
+        tr > th:first-child,
+        tr > td:first-child {
+            width: 340px;
+            padding: 5px 0 5px 1px;
+        }
+        th {
+            width: auto;
+            text-align: left;
+            padding: 5px 0 5px 1px;
+            .current-time {
+                margin-bottom: 0;
+                font-size: 16px;
+                padding: 8px 12px 10px;
+            }
+            .collapsing,
+            .collapse {
+                .collapse-body {
+                    background-color: $gray-200;
+                    padding: 8px 16px 8px 8px;
+                    hr {
+                        margin: 10px -16px;
+                        border-top: 1px solid rgba($gray-400,.5) !important;
+                        border-bottom: 1px solid $gray-100;
+                    }
+                    .user-info {
+                        margin: 0;
+                        padding: 0;
+                        .user-info-crew,
+                        .user-info-zone {
+                            -webkit-box-orient: horizontal;
+                            -webkit-box-direction: normal;
+                            -ms-flex-direction: row;
+                            flex-direction: row;
+                            -webkit-box-align: center;
+                            -ms-flex-align: center;
+                            align-items: center;
+                        }
+                    }
+                    .user-actions {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-pack: justify;
+                        -ms-flex-pack: justify;
+                        justify-content: space-between;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                    }
+                    .user-contact {
+                        text-align: right;
+                        font-size: 14px;
+                        margin: 0;
+                        padding-left: 0;
+                        padding-right: 0;
+                        a {
+                            font-weight: 400;
+                        }
+                        .phone {
+                            font-weight: 400;
+                            font-size: 14px;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+        td {
+            width: auto;
+            vertical-align: top;
+            position: relative;
+            text-align: left;
+            padding: 4px 0 4px 1px;
+            .time-block {
+                height: 36px;
+                width: 100%;
+                margin-bottom: 0;
+            }
+            .table-panel-current-time {
+                position: absolute;
+                z-index: 3;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                background: rgba($app-color-3,.3);
+                border-right: 2px solid $app-color-3;
+            }
+        }
+    }
+}
