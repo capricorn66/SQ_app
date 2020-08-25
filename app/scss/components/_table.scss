@@ -1,54 +1,105 @@
 /* table
 *******************************************************************/
 
-.table-responssive {
+.table-dark.table-sm {
+    border-radius: 6px;
+    td,
+    th {
+        padding: .6rem;
+    }
+}
+
+.table-responsive {
     width: 100vw;
     overflow-x: auto;
+    height: calc(100vh - 50px);
+    @media screen and (max-width: 1599px) {
+        height: calc(100vh - 100px);
+    }
 }
 
 table {
-   font-size: 16px;
-   min-width: 100%;
-   th, td {
-       width: 50%;
-       padding: 8px;
-       border-bottom: 1px solid $gray-300;
-       vertical-align: top;
-   }
-   th {
-        text-align: right;
-        font-size: 13px;
-   }
+    font-size: 16px;
+    min-width: 100%;
+
     &.table-panel {
+        table-layout: fixed;
+        position: relative;
+
+        tr {
+            position: relative;
+            &.markEmployee {
+                th, td {
+                    &::after {
+                        background: rgba($alert-blue, .4);
+                        transition: none;
+                    }
+                }
+            }
+            th, td {
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 2px;
+                    left: 0;
+                    z-index: 1;
+                    pointer-events: none;
+                    transition: background ease-in 1s;
+                }
+            }
+        }
+
+        thead {
+            th {
+                position: sticky;
+                z-index: 5;
+                background-color: #f3f3f3;
+            }
+            tr:first-child th {
+                top: 0;
+            }
+            tr th {
+                top: 51px;
+            }
+        }
         th, td {
+            padding: 8px;
+            border-bottom: 1px solid $gray-100;
+            vertical-align: top;
             border-bottom: 0;
-            border-right: 1px solid $gray-300;
+            border-right: 1px solid $gray-100;
             &:last-child {
                 border-right: 0;
             }
         }
-        table-layout: fixed;
         tr > th:first-child,
         tr > td:first-child {
-            width: 340px;
-            padding: 5px 0 5px 1px;
+            padding: 1px 0 1px 1px;
+        }
+        tr > th:first-child {
+            width: 240px;
         }
         th {
+            font-size: 12px;
+            font-weight: 400;
             width: auto;
             text-align: left;
-            padding: 5px 0 5px 1px;
+            padding: 1px 0 1px 1px;
+            border: 0;
             .current-time {
                 margin-bottom: 0;
-                font-size: 16px;
-                padding: 8px 12px 10px;
+                font-size: 13px;
             }
             .collapsing,
             .collapse {
                 .collapse-body {
                     background-color: $gray-200;
-                    padding: 8px 16px 8px 8px;
+                    padding: 8px;
                     hr {
-                        margin: 10px -16px;
+                        margin: 8px -8px;
                         border-top: 1px solid rgba($gray-400,.5) !important;
                         border-bottom: 1px solid $gray-100;
                     }
@@ -64,56 +115,58 @@ table {
                             -webkit-box-align: center;
                             -ms-flex-align: center;
                             align-items: center;
+                            .badge {
+                                margin: 0;
+                            }
                         }
                     }
                     .user-actions {
-                        display: -webkit-box;
                         display: -ms-flexbox;
                         display: flex;
-                        -webkit-box-pack: justify;
                         -ms-flex-pack: justify;
                         justify-content: space-between;
-                        -webkit-box-align: center;
-                        -ms-flex-align: center;
-                        align-items: center;
                     }
                     .user-contact {
                         text-align: right;
-                        font-size: 14px;
                         margin: 0;
                         padding-left: 0;
                         padding-right: 0;
                         a {
                             font-weight: 400;
+                            color: $gray-500;
                         }
                         .phone {
                             font-weight: 400;
-                            font-size: 14px;
                             padding: 0;
+                            font-size: 12px;
+                            color: $gray-500;
+                            line-height: 1.1;
                         }
                     }
                 }
             }
         }
         td {
-            width: auto;
+            width: 56px;
             vertical-align: top;
             position: relative;
             text-align: left;
-            padding: 4px 0 4px 1px;
+            padding: 1px 0 1px 1px;
             .time-block {
-                height: 36px;
+                height: 35px;
                 width: 100%;
                 margin-bottom: 0;
             }
             .table-panel-current-time {
                 position: absolute;
-                z-index: 3;
-                left: 0;
-                top: 0;
-                bottom: 0;
-                background: rgba($app-color-3,.3);
-                border-right: 2px solid $app-color-3;
+                pointer-events: none;
+                z-index: 4;
+                left: 1px;
+                top: 1px;
+                bottom: 1px;
+                background-image: linear-gradient(135deg, rgba($gray-400,.6) 33.33%, rgba($gray-500,.2) 33.33%, rgba($gray-500,.2) 50%, rgba($gray-400,.6) 50%, rgba($gray-400,.6) 83.33%, rgba($gray-500,.2) 83.33%, rgba($gray-500,.2) 100%);
+                background-size: 12.73px 12.73px;
+                border-right: 2px solid $app-color-4;
             }
         }
     }

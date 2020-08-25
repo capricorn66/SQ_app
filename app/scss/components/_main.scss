@@ -3,11 +3,9 @@
 
 .current-time {
     display: inline-block;
-    border: 1px solid $gray-400;
-    padding: 10px 16px 14px;
-    border-radius: 4px;
     font-size: 18px;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
+    pointer-events: none;
     small {
         display: block;
         opacity: .6;
@@ -15,24 +13,104 @@
     }
 }
 
+.active-job-card {
+    color: $white;
+    margin-bottom: 30px;
+    .active-job-card-header,
+    .active-job-card-footer {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .active-job-card-header {
+        background-color: $app-color-3;
+        border-radius: 8px 8px 0 0;
+        padding: 10px 32px;
+        .active-job-card-header-info-title {
+            font-size: 18px;
+        }
+    }
+    .active-job-card-body {
+        background-size: cover;
+        background-position: center center;
+        padding: 12px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background-color: rgba(0,0,0,.4);
+        }
+        .active-job-card-body-container {
+            background-color: rgba(0,0,0,.6);
+            margin-bottom: 15px;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+            .h2,
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+            }
+            .h3,
+            h3 {
+                font-size: 16px;
+            }
+        }
+        .active-job-card-body-action {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+            padding: 0 20px;
+            margin-bottom: 5px;
+        }
+    }
+    .active-job-card-footer {
+        background-color: darken($app-color-1, 5%);
+        border-radius: 0 0 8px 8px;
+        padding: 10px 32px;
+    }
+}
+
 .time-block {
-    background: $white;
-    border: 2px solid $gray-200;
+    background: $gray-100;
     color: $gray-500;
     text-align: center;
     margin-bottom: 8px;
     font-size: 18px;
     position: relative;
-    cursor: pointer;
-    &.time-block-available {
-        background-color: $app-color-1;
+    button {
+        cursor: pointer;
         border: 0;
-        box-shadow: 0 0 8px 4px rgba($black, .1) inset;
+    }
+
+    &.time-block-available {
+        background-color: lighten($app-color-1, 10%);
+        color: $white;
+    }
+
+    .time-block-available {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: lighten($app-color-1, 10%);
         color: $white;
     }
     .time-block-current-time {
         position: absolute;
-        z-index: 1;
+        z-index: 2;
         top: 0;
         bottom: 0;
         left: 0;
@@ -40,11 +118,11 @@
     }
     .time-block-busy {
         position: absolute;
-        z-index: 2;
+        z-index: 3;
         top: 0;
         bottom: 0;
         left: 0;
-        background: rgba($app-color-2,.7);
+        background: $app-color-2;
     }
     .time-block-body {
         padding: 10px 8px 8px;
@@ -62,6 +140,274 @@
             display: block;
             font-size: 14px;
             opacity: .8;
+        }
+    }
+}
+
+.block-row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    position: relative;
+    margin: 0 15px 10px;
+    &.block-row-completed {
+        padding-top: 30px;
+        margin-top: 30px;
+        border-top: 1px solid darken($gray-300, 14%);
+        -ms-flex-pack: center;
+        justify-content: center;
+        &::before {
+            content:  attr(data-completed);
+            display: inline-block;
+            padding: 0 10px;
+            position: absolute;
+            top: -12px;
+            text-align: center;
+            background-color: $gray-200;
+            color: $gray-500;
+        }
+
+    }
+    .time-set {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-align: center;
+        align-items: center;
+        font-size: 12px;
+        margin-right: 40px;
+        width: 258px;
+
+        &.justify-content-center {
+            .time-set-start,
+            .time-set-end {
+                &::before {
+                    color: $gray-400;
+                }
+            }
+        }
+
+        &.time-set-busy {
+            .time-set-start,
+            .time-set-end {
+                &::before {
+                    color: lighten($app-color-3, 12%);
+                }
+            }
+            .time-set-total {
+                background-color: lighten($app-color-3, 12%);
+            }
+        }
+
+        .time-set-start,
+        .time-set-end {
+            background: none;
+            border: 0;
+            white-space: nowrap;
+            &::before {
+                /* use !important to prevent issues with browser extensions that change fonts */
+                font-family: 'icomoon' !important;
+                speak: none;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+
+                /* Better Font Rendering =========== */
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                color: $gray-600;
+                font-size: 22px;
+            }
+        }
+
+        .time-set-start {
+            position: relative;
+            padding-right: 30px;
+            &::before {
+                content: "\e908";
+                position: absolute;
+                right: 0;
+            }
+            &::after {
+                content:  attr(data-time-start);
+                display: inline-block;
+            }
+        }
+        .time-set-total {
+            background-color: $gray-600;
+            color: $white;
+            text-align: center;
+            width: 120px;
+            &::after {
+                content:  attr(data-time-total);
+                display: inline-block;
+            }
+        }
+        .time-set-end {
+            position: relative;
+            padding-left: 30px;
+            &::before {
+                content: "\e907";
+                position: absolute;
+                left: 0;
+            }
+            &::after {
+                content:  attr(data-time-end);
+                display: inline-block;
+            }
+        }
+    }
+
+    .place {
+        display: -ms-flexbox;
+        display: flex;
+        margin-right: auto;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        .place-code {
+            background-color: $app-color-5;
+            color: $white;
+            line-height: 1.2em;
+            padding: 0 6px;
+            border-radius: 3px;
+            margin-right: 8px;
+            white-space: nowrap;
+        }
+        .place-address {
+            strong {
+                font-size: 18px;
+                sup {
+                    font-weight: 400;
+                    color: $gray-500;
+                    font-size: 11px;
+                }
+            }
+            p {
+                color: $gray-600;
+            }
+        }
+    }
+
+    .action {
+        display: -ms-flexbox;
+        display: flex;
+        .block-hide-btn {
+            height: 20px;
+            border-radius: 3px;
+            background-color: $app-color-4;
+            color: $white;
+            font-size: 10px;
+            text-align: center;
+            line-height: 18px;
+            padding: 0 6px;
+            margin-left: 6px;
+            border: 0;
+            white-space: nowrap;
+        }
+        .block-check {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            background-color: $app-color-1;
+            color: $white;
+            font-size: 10px;
+            text-align: center;
+            line-height: 18px;
+            margin-left: 6px;
+        }
+        .block-close {
+            background-color: lighten($gray-400, 14%);
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            color: $gray-700;
+            font-size: 10px;
+            text-align: center;
+            line-height: 18px;
+            padding: 0;
+            border: 0;
+            margin-left: 6px;
+            .icon-close {
+                top: -2px;
+                position: relative;
+            }
+            &:hover {
+                background-color: $app-color-4;
+                color: $white;
+            }
+        }
+    }
+}
+
+.employee {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    position: relative;
+    margin: 0 0 10px;
+    min-height: 42px;
+    .employee-name {
+        font-size: 22px;
+        sup {
+            font-weight: 400;
+            color: $gray-500;
+            font-size: 13px;
+        }
+    }
+    .employee-contact {
+        text-align: right;
+        margin-left: auto;
+    }
+    .employee-score {
+        margin-left: 20px;
+        background: $app-color-1;
+        color: $white;
+        display: inline-block;
+        padding: 0 6px 0 5px;
+        border-radius: 12px;
+        font-weight: 400;
+        font-size: 10px;
+        min-width: 20px;
+        height: 20px;
+        text-align: center;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-top: 4px;
+    }
+    .action {
+        margin-left: 30px;
+        .block-close {
+            background-color: lighten($gray-400, 14%);
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            color: $gray-700;
+            font-size: 10px;
+            text-align: center;
+            line-height: 18px;
+            padding: 0;
+            border: 0;
+            margin-left: 6px;
+            .icon-close {
+                top: -2px;
+                position: relative;
+            }
+            &:hover {
+                background-color: $app-color-4;
+                color: $white;
+            }
         }
     }
 }

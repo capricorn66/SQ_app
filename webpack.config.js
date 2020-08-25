@@ -18,6 +18,9 @@ const htmlIndex = generateHtml('index');
 const htmlLogin = generateHtml('login');
 const htmlProfile = generateHtml('profile');
 const htmlPanel = generateHtml('panel');
+const htmlPropertyList = generateHtml('propertyList');
+const htmlOrderList = generateHtml('orderList');
+const htmlPropertyDetails = generateHtml('propertyDetails');
 
 module.exports = (env, options) => {
 
@@ -26,13 +29,12 @@ module.exports = (env, options) => {
     return {
 
         entry: {
-            vendor: './app/js/vendor.js',
             app: './app/app.js',
         },
 
         output: {
             path: path.resolve(__dirname, 'dist/'),
-            filename: devMode ? 'js/[name].js' : 'js/[name].[chunkhash].min.js'
+            filename: devMode ? 'js/[name].js' : 'js/[name].min.js'
         },
 
         plugins: [
@@ -41,8 +43,8 @@ module.exports = (env, options) => {
                 { from: './app/images', to: 'images' },
             ]),
             new MiniCssExtractPlugin({
-                filename: devMode ? 'css/[name].css' : 'css/[name].[chunkhash].min.css',
-                chunkFilename: devMode ? 'css/[id].css' : 'css/[id].[chunkhash].min.css',
+                filename: devMode ? 'css/[name].css' : 'css/[name].min.css',
+                chunkFilename: devMode ? 'css/[id].css' : 'css/[id].min.css',
             }),
             new ImageminPlugin({ test: './app/images/**' }),
             new ImageminPlugin({
@@ -55,7 +57,10 @@ module.exports = (env, options) => {
             .concat(htmlIndex)
             .concat(htmlLogin)
             .concat(htmlProfile)
-            .concat(htmlPanel),
+            .concat(htmlPanel)
+            .concat(htmlPropertyList)
+            .concat(htmlOrderList)
+            .concat(htmlPropertyDetails),
 
 
         optimization: {
@@ -63,10 +68,26 @@ module.exports = (env, options) => {
                 new OptimizeCSSAssetsPlugin({}),
                 new UglifyJsPlugin(),
             ],
+            splitChunks: {
+                chunks: 'all',
+            }
         },
 
         module: {
             rules: [
+                {
+                    test: require.resolve('jquery'),
+                    use: [
+                        {
+                            loader: 'expose-loader',
+                            options: 'jQuery',
+                        },
+                        {
+                            loader: 'expose-loader',
+                            options: '$',
+                        },
+                    ],
+                },
                 {
                     test: /\.js$/,
                     exclude: /node-modules/,

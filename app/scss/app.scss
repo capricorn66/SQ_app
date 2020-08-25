@@ -1,7 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-
 // Bootstrap v4.3.1 (https://getbootstrap.com/)
 // Required
 @import "~bootstrap/scss/functions";
@@ -21,6 +20,12 @@
 @import "~bootstrap/scss/forms";
 @import "~bootstrap/scss/modal";
 @import "~bootstrap/scss/custom-forms";
+@import "~bootstrap/scss/toasts";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/dropdown";
+
+// DesignSystem: plugins-custom
+@import "~bootstrap-select/sass/bootstrap-select";
 
 // utilities
 @import "utilities/variables";
@@ -35,3 +40,8 @@
 @import "components/icons";
 @import "components/badge";
 @import "components/table";
+@import "components/toasts";
+@import "components/forms";
+@import "components/modal";
+@import "components/tabs";
+@import "components/box";

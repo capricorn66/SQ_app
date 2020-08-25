@@ -4,20 +4,51 @@
 .badge {
     font-weight: 400;
     font-size: 12px;
-    padding: 0 8px 1px;
-    display: -webkit-inline-box;
+    padding: 0 4px 1px;
     display: -ms-inline-flexbox;
     display: inline-flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     height: 22px;
+    min-width: 22px;
+    &.badge-sm {
+        padding: 0 3px 1px;
+        height: 18px;
+        min-width: 18px;
+    }
     &.badge-blue {
         background-color: $app-color-2;
         color: $white;
     }
     &.badge-gray {
-        background-color: $gray-600;
+        background-color: $gray-700;
         color: $white;
+    }
+    &.badge-green {
+        background-color: lighten($app-color-1, 20%);
+        color: $white;
+    }
+    &.badge-red {
+        background-color: lighten($app-color-4, 20%);
+        color: $white;
+    }
+    &.badge-darkred {
+        background-color: $app-color-4;
+        color: $white;
+    }
+    &.badge-lightgray {
+        background-color: $gray-400;
+        color: $white;
+    }
+    &.badge-yellow {
+        background-color: $app-color-6;
+        color: $white;
+    }
+    &.badge-type {
+        min-width: 50px;
+        text-align: center;
     }
 }

@@ -10,6 +10,13 @@
 .app-bg-color-3 {
     background-color: $app-color-3 !important;
 }
+.app-bg-color-4 {
+    background-color: $app-color-4 !important;
+}
+.app-bg-color-5 {
+    background-color: $app-color-5 !important;
+}
+
 .app-color-1 {
     color: $app-color-1;
 }
@@ -21,6 +28,9 @@
 }
 .app-color-4 {
     color: $app-color-4;
+}
+.app-color-5 {
+    color: $app-color-5;
 }
 
 .white {
@@ -87,8 +97,17 @@
     background-color: $gray-900 !important;
 }
 
-.font-18 {
-    font-size: 18px;
+@for $i from 5 through 40 {
+    $j: $i * 2;
+    .font-#{$j} {
+        font-size: #{$j}px !important;
+        line-height: 1.3em;
+    }
+}
+
+.font-11 {
+    font-size: 11px !important;
+    line-height: 1.3em;
 }
 
 .v-mid {
@@ -152,8 +171,8 @@
 }
 
 
-@for $i from 1 through 10 {
-    $j: $i * 8;
+@for $i from 1 through 20 {
+    $j: $i * 5;
     .mt-#{$j} {
         margin-top: #{$j}px !important;
     }
@@ -176,8 +195,8 @@
     }
 }
 
-@for $i from 1 through 10 {
-    $j: $i * 8;
+@for $i from 1 through 20 {
+    $j: $i * 5;
     .pt-#{$j} {
         padding-top: #{$j}px !important;
     }

@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap&subset=latin-ext" rel="stylesheet">
+
+</head>
+<body class="dispatcher-app">
+
+    <header>
+        <div class="container-fluid">
+            <div class="user-nav flex-wrap">
+                <div class="col-sm-6 col-md-4 py-10">
+                    <div class="current-time">
+                        Curent Time: <strong>01:21 AM</strong>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 text-sm-right text-md-center py-10">
+                    <div class="zone">
+                        <strong>Zone2</strong> (Coquitlam West)
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center justify-content-end py-10">
+                        Hi, Kevin Smith
+                        <a href="" class="btn btn-primary btn-sm ml-4">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <img src="images/snow-queen.svg" alt="SNOW QUEEN" class="brand">
+        </div>
+
+        <div class="container">
+            <nav>
+                <div class="nav nav-tabs" role="tablist">
+                    <a href="" class="nav-link active" id="nav-property-tab" role="tab" aria-controls="nav-property" aria-selected="false">Property List</a>
+                    <a href="" class="nav-link" id="nav-availability-tab" role="tab" aria-controls="nav-availability" aria-selected="true">Op. Availability</a>
+                    <a href="" class="nav-link" id="nav-roster-tab" role="tab" aria-controls="nav-roster" aria-selected="false">Op. Roster</a>
+                    <a href="" class="nav-link ml-auto" id="nav-ordersr-tab" role="tab" aria-controls="nav-orders" aria-selected="false">SSQ Orders(17)</a>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="nav-availability" role="tabpanel" aria-labelledby="nav-availability-tab">
+
+            <div class="container-fluid">
+
+                <div class="d-flex mb-40">
+                    <div class="pr-4">
+                        <div class="d-flex align-items-center mb-1">
+                            <span class="font-16">Zone</span>
+                            <div class="badge badge-yellow ml-2">Z2</div>
+                        </div>
+                        <strong class="d-block font-20 mb-2">Colbourne lane</strong>
+                        <div class="gray-600 font-weight-light">
+                            <small class="font-14 no-wrap">Total Properties: <strong>5</strong></small>
+                            <small class="font-14 no-wrap">Total Operators: <strong>37</strong></small>
+                            <small class="font-14 no-wrap">Pending SSQ Orders: <strong class="app-color-4">17</strong></small>
+                            <small class="font-14 no-wrap">Zone Manager: <strong>kevin Smith</strong></small>
+                        </div>
+                    </div>
+                    <div class="ml-auto text-right">
+                        <span class="font-weight-light d-block mb-2 no-wrap">Automated Salting Route:</span>
+                        <a href="" class="btn btn-blue px-40">Start</a>
+                        <div class="py-3">
+                            <span class="badge badge-type badge-gray px-1 mr-2">SPT</span> Kevin Smith
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box bg-gray-200 mb-30">
+                    <div class="d-flex mb-4">
+                        <div class="pr-4">
+                            <strong class="d-flex align-items-center mb-1">
+                                <span class="font-18">Colbourne lane</span>
+                                <span class="badge badge-red ml-2">H</span>
+                            </strong>
+                            <small class="font-14">3289 Comp Lane, Coquitlam</small>
+                        </div>
+                        <div class="ml-auto">
+                            <span class="btn btn-white btn-md ml-3 font-18">-1&deg; C</span>
+                            <a href="" class="btn btn-green btn-md ml-3">Property Details</a>
+                        </div>
+                    </div>
+
+                    <div class="row gutter-sm box box-sm font-14 gray-600">
+                        <div class="col-sm-3">Active Visits:</div>
+                        <div class="col-sm-5 text-center">Dispatch Date/Time</div>
+                        <div class="col-sm-2 text-center">Visit Status</div>
+                        <div class="col-sm-2 text-right">Completion</div>
+                    </div>
+                    <div class="row gutter-sm box box-sm bg-white font-14 align-items-center">
+                        <div class="col-sm-3">Snow Removal</div>
+                        <div class="col-sm-5 font-12 text-center">
+                            <span class="gray-500">Dispatched</span> Nov 3
+                            <span class="gray-500">at</span> 6:40 pm
+                            <span class="gray-500">(30 min ago)</span>
+                        </div>
+                        <div class="col-sm-2 font-11 gray-500 d-flex align-items-center no-wrap justify-content-center"><div class="badge badge-sm badge-blue mr-2">&nbsp;</div> in Progress</div>
+                        <div class="col-sm-2 text-right"><small class="font-10 gray-500 px-1">EST</small> <span class="font-16">8:00</span> pm</div>
+                    </div>
+
+                </div>
+
+                <div class="box bg-gray-200 mb-30">
+                    <div class="d-flex mb-4">
+                        <div class="pr-4">
+                            <strong class="d-flex align-items-center mb-1">
+                                <span class="font-18">Colbourne lane</span>
+                                <span class="badge badge-red ml-2">H</span>
+                            </strong>
+                            <small class="font-14">3289 Comp Lane, Coquitlam</small>
+                        </div>
+                        <div class="ml-auto">
+                            <span class="btn btn-white btn-md ml-3 font-18">-1&deg; C</span>
+                            <a href="" class="btn btn-green btn-md ml-3">Property Details</a>
+                        </div>
+                    </div>
+
+                    <div class="row gutter-sm box box-sm font-14 gray-600">
+                        <div class="col-sm-3">Active Visits:</div>
+                        <div class="col-sm-5 text-center">Dispatch Date/Time</div>
+                        <div class="col-sm-2 text-center">Visit Status</div>
+                        <div class="col-sm-2 text-right">Completion</div>
+                    </div>
+                    <div class="row gutter-sm box box-sm bg-white font-14 align-items-center">
+                        <div class="col-sm-3">Snow Removal</div>
+                        <div class="col-sm-5 font-12 text-center">
+                            <span class="gray-500">Dispatched</span> Nov 3
+                            <span class="gray-500">at</span> 6:40 pm
+                            <span class="gray-500">(30 min ago)</span>
+                        </div>
+                        <div class="col-sm-2 font-11 gray-500 d-flex align-items-center no-wrap justify-content-center"><div class="badge badge-sm badge-green mr-2">&nbsp;</div> Finished</div>
+                        <div class="col-sm-2 text-right app-color-1"><small class="font-10 gray-500 px-1">FIN</small> <span class="font-16">7:00</span> pm</div>
+                    </div>
+
+                </div>
+
+                <div class="box bg-gray-200 mb-30">
+                    <div class="d-flex mb-4">
+                        <div class="pr-4">
+                            <strong class="d-flex align-items-center mb-1">
+                                <span class="font-18">Colbourne lane</span>
+                            </strong>
+                            <small class="font-14">3289 Comp Lane, Coquitlam</small>
+                        </div>
+                        <div class="ml-auto">
+                            <span class="btn btn-white btn-md ml-3 font-18">-1&deg; C</span>
+                            <a href="" class="btn btn-green btn-md ml-3">Property Details</a>
+                        </div>
+                    </div>
+
+                    <div class="row gutter-sm box box-sm font-14 gray-600">
+                        <div class="col-sm-3">Active Visits:</div>
+                        <div class="col-sm-5 text-center"></div>
+                        <div class="col-sm-2 text-center"></div>
+                        <div class="col-sm-2 text-right"></div>
+                    </div>
+                    <div class="row gutter-sm box box-sm bg-white font-14 align-items-center">
+                        <div class="col-sm-3 app-color-4">No Active Visits</div>
+                        <div class="col-sm-5 font-12 text-center">
+                        </div>
+                        <div class="col-sm-2 font-12"></div>
+                        <div class="col-sm-2 text-right app-color-1">
+                            <a href="" class="btn btn-blue btn-sm">Create Visit</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="box bg-gray-200 mb-30">
+                    <div class="d-flex mb-4">
+                        <div class="pr-4">
+                            <strong class="d-flex align-items-center mb-1">
+                                <span class="font-18">Colbourne lane</span>
+                                <span class="badge badge-red ml-2">H</span>
+                            </strong>
+                            <small class="font-14">3289 Comp Lane, Coquitlam</small>
+                        </div>
+                        <div class="ml-auto">
+                            <span class="btn btn-white btn-md ml-3 font-18">-1&deg; C</span>
+                            <a href="" class="btn btn-green btn-md ml-3">Property Details</a>
+                        </div>
+                    </div>
+
+                    <div class="row gutter-sm box box-sm font-14 gray-600">
+                        <div class="col-sm-3">Active Visits:</div>
+                        <div class="col-sm-5 text-center">Dispatch Date/Time</div>
+                        <div class="col-sm-2 text-center">Visit Status</div>
+                        <div class="col-sm-2 text-right">Completion</div>
+                    </div>
+                    <div class="row gutter-sm box box-sm bg-white font-14 align-items-center">
+                        <div class="col-sm-3">Snow Removal</div>
+                        <div class="col-sm-5 font-12 text-center">
+                            <span class="gray-500">Dispatched</span> Nov 3
+                            <span class="gray-500">at</span> 6:40 pm
+                            <span class="gray-500">(30 min ago)</span>
+                        </div>
+                        <div class="col-sm-2 font-11 gray-500 d-flex align-items-center no-wrap justify-content-center"><div class="badge badge-sm badge-gray mr-2">&nbsp;</div> On The Way</div>
+                        <div class="col-sm-2 text-right app-color-1"><small class="font-10 gray-500 px-1">FIN</small> <span class="font-16">7:00</span> pm</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

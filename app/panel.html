@@ -10,354 +10,541 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap&subset=latin-ext" rel="stylesheet">
 
 </head>
-<body>
+<body class="dispatcher-app">
 
-    <div class="table-responssive">
+    <header>
+        <div class="container-fluid">
+            <div class="user-nav flex-wrap">
+                <div class="col-sm-6 col-md-4 py-10">
+                    <div class="current-time">
+                        Curent Time: <strong>01:21 AM</strong>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 text-sm-right text-md-center py-10">
+                    <div class="zone">
+                        <strong>Zone2</strong> (Coquitlam West)
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center justify-content-end py-10">
+                        Hi, Kevin Smith
+                        <a href="" class="btn btn-primary btn-sm ml-4">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <table class="table-panel">
-            <tr>
-                <th class="text-center v-mid"><span class="current-time">Curent Time: 01:21 AM</span></th>
-                <th class="text-center v-mid app-color-3">NOW</th>
-                <th class="text-center v-mid" colspan="2">6 HOURS</th>
-                <th class="text-center v-mid" colspan="2">12 HOURS</th>
-                <th class="text-center v-mid" colspan="2">18 HOURS</th>
-                <th class="text-center v-mid" colspan="2">24 HOURS</th>
-            </tr>
-            <tr>
-                <th><strong class="app-color-1 font-18 px-8">Available:</strong></th>
-                <th class="text-center no-wrap px-16 bg-gray-500 white">12:00 - 03:00</th>
-                <th class="text-center no-wrap px-16 bg-gray-300">03:00 - 06:00</th>
-                <th class="text-center no-wrap px-16 bg-gray-300">06:00 - 09:00</th>
-                <th class="text-center no-wrap px-16 bg-gray-300">09:00 - 12:00</th>
-                <th class="text-center no-wrap px-16 bg-gray-300">12:00 - 15:00</th>
-                <th class="text-center no-wrap px-16 bg-gray-300">15:00 - 18:00</th>
-                <th class="text-center no-wrap px-16 bg-gray-300">18:00 - 21:00</th>
-                <th class="text-center no-wrap px-16 bg-gray-300">21:00 - 24:00</th>
-                <th class="text-center no-wrap px-16 bg-gray-300">00:00 - 03:00</th>
-            </tr>
-            <tr>
-                <th>
-                    <a class="btn-collapse no-wrap" data-toggle="collapse" href="#collapse_MarkStorm" role="button" aria-expanded="false" aria-controls="collapse_MarkStorm">
-                        Mark Storm <span class="score">100</span>
-                    </a>
-                    <div class="collapse" id="collapse_MarkStorm">
-                        <div class="collapse-body">
-                            <div class="user-info">
-                                <div class="user-info-crew">
-                                    <div class="badge badge-blue mr-8">Shamrock</div> Crew
+        <div class="d-flex justify-content-center">
+            <img src="images/snow-queen.svg" alt="SNOW QUEEN" class="brand">
+        </div>
+
+        <div class="container">
+            <nav>
+                <div class="nav nav-tabs" role="tablist">
+                    <a href="" class="nav-link" id="nav-property-tab" role="tab" aria-controls="nav-property" aria-selected="false">Property List</a>
+                    <a href="" class="nav-link active" id="nav-availability-tab" role="tab" aria-controls="nav-availability" aria-selected="true">Op. Availability</a>
+                    <a href="" class="nav-link" id="nav-roster-tab" role="tab" aria-controls="nav-roster" aria-selected="false">Op. Roster</a>
+                    <a href="" class="nav-link ml-auto" id="nav-ordersr-tab" role="tab" aria-controls="nav-orders" aria-selected="false">SSQ Orders(17)</a>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="nav-availability" role="tabpanel" aria-labelledby="nav-availability-tab">
+
+            <div class="container-fluid">
+
+                <div class="table-responssive">
+                    <table class="table-panel">
+                        <tr>
+                            <th class="text-center v-mid"></th>
+                            <th class="text-center v-mid py-2">NOW</th>
+                            <th class="text-center v-mid py-2" colspan="2">6 HOURS</th>
+                            <th class="text-center v-mid py-2" colspan="2">12 HOURS</th>
+                            <th class="text-center v-mid py-2" colspan="2">18 HOURS</th>
+                            <th class="text-center v-mid py-2" colspan="2">24 HOURS</th>
+                        </tr>
+                        <tr>
+                            <th class="text-center"><span class="current-time">Curent Time: 01:21 AM</span></th>
+                            <th class="text-center no-wrap bg-gray-500 white">00:00</th>
+                            <th class="text-center no-wrap bg-gray-300">03:00</th>
+                            <th class="text-center no-wrap bg-gray-300">06:00</th>
+                            <th class="text-center no-wrap bg-gray-300">09:00</th>
+                            <th class="text-center no-wrap bg-gray-300">12:00</th>
+                            <th class="text-center no-wrap bg-gray-300">15:00</th>
+                            <th class="text-center no-wrap bg-gray-300">18:00</th>
+                            <th class="text-center no-wrap bg-gray-300">21:00</th>
+                            <th class="text-center no-wrap bg-gray-300">24:00</th>
+                        </tr>
+                        <tr>
+                            <th class="py-1" colspan="10"></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="btn-collapse no-wrap" data-toggle="collapse" href="#collapse_DrewDarkins" role="button" aria-expanded="false" aria-controls="collapse_DrewDarkins">
+                                    <span class="badge badge-type badge-gray px-1 mr-2">SVLx2</span> Drew Darkins
+                                </a>
+                                <div class="collapse" id="collapse_DrewDarkins">
+                                    <div class="collapse-body">
+                                        <div class="user-info">
+                                            <div class="user-info-zone ml-auto">
+                                                <div class="badge badge-gray">Unspecified</div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="user-actions">
+                                            <div class="badge badge-green">24/7</div>
+                                            <span class="user-contact">
+                                            <a href="mailto: storm_mark@gmail.com">storm_mark@gmail.com</a><br>
+                                            <span class="phone">604 449-8824</span>
+                                        </span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="user-info-zone">
-                                    Zone <div class="badge badge-gray ml-8">Pitt Meadows</div>
+                            </th>
+                            <td>
+                                <div class="table-panel-current-time" style="width: 71.31%"></div>
+                                <div type="button" class="time-block">
+                                    <button type="button" class="time-block-busy" data-toggle="modal" data-target="#modal" style="width: 90.31%"></button>
+                                    <button type="button" class="time-block-available" data-toggle="modal" data-target="#modal"></button>
                                 </div>
-                            </div>
-                            <hr>
-                            <div class="user-actions">
-                                <a href="" class="btn btn-md btn-dark mr-16" data-toggle="modal" data-target="#modal">Assign Job</a>
-                                <span class="user-contact">
-                                <a href="mailto: storm_mark@gmail.com">storm_mark@gmail.com</a><br>
-                                <span class="phone">604 449-8824</span>
+                            </td>
+                            <td>
+                                <div class="time-block">
+                                    <button type="button" class="time-block-available" data-toggle="modal" data-target="#modal"></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                            <span class="subItem no-wrap">
+                                <span class="typeLink"></span> Trever Robinson
                             </span>
-                            </div>
-                        </div>
-                    </div>
-                </th>
-                <td>
-                    <div class="table-panel-current-time" style="width: 21.31%"></div>
-                    <button type="button" class="time-block time-block-available" data-toggle="modal" data-target="#modal">
-                        <div class="time-block-busy" style="width: 100%"></div>
-                    </button>
-                </td>
-                <td>
-                    <button type="button" class="time-block time-block-available" data-toggle="modal" data-target="#modal">
-                        <div class="time-block-busy" style="width: 25.31%"></div>
-                    </button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block time-block-available" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block time-block-available" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    <a class="btn-collapse no-wrap" data-toggle="collapse" href="#collapse_DrewDarkins" role="button" aria-expanded="false" aria-controls="collapse_DrewDarkins">
-                        Drew Darkins <span class="score">100</span>
-                    </a>
-                    <div class="collapse" id="collapse_DrewDarkins">
-                        <div class="collapse-body">
-                            <div class="user-info">
-                                <div class="user-info-crew">
-                                    <div class="badge badge-blue mr-8">Shamrock</div> Crew
+                            </th>
+                            <td>
+                                <div class="table-panel-current-time" style="width: 71.31%"></div>
+                                <div type="button" class="time-block">
+                                    <button type="button" class="time-block-busy" data-toggle="modal" data-target="#modal" style="width: 90.31%"></button>
+                                    <button type="button" class="time-block-available" data-toggle="modal" data-target="#modal"></button>
                                 </div>
-                                <div class="user-info-zone">
-                                    Zone <div class="badge badge-gray ml-8">Pitt Meadows</div>
+                            </td>
+                            <td>
+                                <div class="time-block">
+                                    <button type="button" class="time-block-available" data-toggle="modal" data-target="#modal"></button>
                                 </div>
-                            </div>
-                            <hr>
-                            <div class="user-actions">
-                                <a href="" class="btn btn-md btn-dark mr-16" data-toggle="modal" data-target="#modal">Assign Job</a>
-                                <span class="user-contact">
-                                    <a href="mailto: storm_mark@gmail.com">storm_mark@gmail.com</a><br>
-                                    <span class="phone">604 449-8824</span>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="py-1" colspan="10"></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="btn-collapse no-wrap" data-toggle="collapse" href="#collapse_StephanieVance" role="button" aria-expanded="false" aria-controls="collapse_StephanieVance">
+                                    <span class="badge badge-type badge-gray px-1 mr-2">SPT</span> Stephanie Vance
+                                </a>
+                                <div class="collapse" id="collapse_StephanieVance">
+                                    <div class="collapse-body">
+                                        <div class="user-info">
+                                            <div class="user-info-zone ml-auto">
+                                                <div class="badge badge-gray">Unspecified</div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="user-actions">
+                                            <div class="badge badge-green">24/7</div>
+                                            <span class="user-contact">
+                                            <a href="mailto: storm_mark@gmail.com">storm_mark@gmail.com</a><br>
+                                            <span class="phone">604 449-8824</span>
+                                        </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </th>
+                            <td>
+                                <div class="table-panel-current-time" style="width: 71.31%"></div>
+                                <div type="button" class="time-block">
+                                    <button type="button" class="time-block-busy" data-toggle="modal" data-target="#modal" style="width: 90.31%"></button>
+                                    <button type="button" class="time-block-available" data-toggle="modal" data-target="#modal"></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="time-block">
+                                    <button type="button" class="time-block-available" data-toggle="modal" data-target="#modal"></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="py-1" colspan="10"></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="btn-collapse no-wrap" data-toggle="collapse" href="#collapse_DavidDick" role="button" aria-expanded="false" aria-controls="collapse_DavidDick">
+                                    <span class="badge badge-type badge-gray px-1 mr-2">SVLx2</span> David Dick
+                                </a>
+                                <div class="collapse" id="collapse_DavidDick">
+                                    <div class="collapse-body">
+                                        <div class="user-info">
+                                            <div class="user-info-zone ml-auto">
+                                                <div class="badge badge-gray">Unspecified</div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="user-actions">
+                                            <div class="badge badge-green">24/7</div>
+                                            <span class="user-contact">
+                                            <a href="mailto: storm_mark@gmail.com">storm_mark@gmail.com</a><br>
+                                            <span class="phone">604 449-8824</span>
+                                        </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </th>
+                            <td>
+                                <div class="table-panel-current-time" style="width: 71.31%"></div>
+                                <div type="button" class="time-block">
+                                    <button type="button" class="time-block-busy" data-toggle="modal" data-target="#modal" style="width: 90.31%"></button>
+                                    <button type="button" class="time-block-available" data-toggle="modal" data-target="#modal"></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="time-block">
+                                    <button type="button" class="time-block-available" data-toggle="modal" data-target="#modal"></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span class="subItem no-wrap">
+                                    <span class="typeLink"></span> Stave Dick
                                 </span>
-                            </div>
-                        </div>
-                    </div>
-                </th>
-                <td>
-                    <div class="table-panel-current-time" style="width: 21.31%"></div>
-                    <button type="button" class="time-block time-block-available" data-toggle="modal" data-target="#modal">
-                        <div class="time-block-busy" style="width: 50.31%"></div>
-                    </button>
-                </td>
-                <td>
-                    <button type="button" class="time-block time-block-available" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    <a class="btn-collapse no-wrap" data-toggle="collapse" href="#collapse_KevinSmith" role="button" aria-expanded="false" aria-controls="collapse_KevinSmith">
-                        Kevin Smith <span class="score">70</span>
-                    </a>
-                    <div class="collapse" id="collapse_KevinSmith">
-                        <div class="collapse-body">
-                            <div class="user-info">
-                                <div class="user-info-crew">
-                                    <div class="badge badge-blue mr-8">Shamrock</div> Crew
+                            </th>
+                            <td>
+                                <div class="table-panel-current-time" style="width: 71.31%"></div>
+                                <div type="button" class="time-block">
+                                    <button type="button" class="time-block-busy" data-toggle="modal" data-target="#modal" style="width: 90.31%"></button>
+                                    <button type="button" class="time-block-available" data-toggle="modal" data-target="#modal"></button>
                                 </div>
-                                <div class="user-info-zone">
-                                    Zone <div class="badge badge-gray ml-8">Pitt Meadows</div>
+                            </td>
+                            <td>
+                                <div class="time-block">
+                                    <button type="button" class="time-block-available" data-toggle="modal" data-target="#modal"></button>
                                 </div>
-                            </div>
-                            <hr>
-                            <div class="user-actions">
-                                <a href="" class="btn btn-md btn-dark mr-16" data-toggle="modal" data-target="#modal">Assign Job</a>
-                                <span class="user-contact">
-                                    <a href="mailto: storm_mark@gmail.com">storm_mark@gmail.com</a><br>
-                                    <span class="phone">604 449-8824</span>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span class="subItem no-wrap">
+                                    <span class="typeLink"></span> Bob Dick
                                 </span>
-                            </div>
-                        </div>
-                    </div>
-                </th>
-                <td>
-                    <div class="table-panel-current-time" style="width: 21.31%"></div>
-                    <button type="button" class="time-block time-block-available" data-toggle="modal" data-target="#modal">
-                        <div class="time-block-busy" style="width: 33.31%"></div>
-                    </button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block time-block-available" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block time-block-available" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    <a class="btn-collapse no-wrap" data-toggle="collapse" href="#collapse_AlexanderHeverendy" role="button" aria-expanded="false" aria-controls="collapse_AlexanderHeverendy">
-                        Alexander Heverendy <span class="score">78</span>
-                    </a>
-                    <div class="collapse" id="collapse_AlexanderHeverendy">
-                        <div class="collapse-body">
-                            <div class="user-info">
-                                <div class="user-info-crew">
-                                    <div class="badge badge-blue mr-8">Shamrock</div> Crew
+                            </th>
+                            <td>
+                                <div class="table-panel-current-time" style="width: 71.31%"></div>
+                                <div type="button" class="time-block">
+                                    <button type="button" class="time-block-busy" data-toggle="modal" data-target="#modal" style="width: 90.31%"></button>
+                                    <button type="button" class="time-block-available" data-toggle="modal" data-target="#modal"></button>
                                 </div>
-                                <div class="user-info-zone">
-                                    Zone <div class="badge badge-gray ml-8">Pitt Meadows</div>
+                            </td>
+                            <td>
+                                <div class="time-block">
+                                    <button type="button" class="time-block-available" data-toggle="modal" data-target="#modal"></button>
                                 </div>
-                            </div>
-                            <hr>
-                            <div class="user-actions">
-                                <a href="" class="btn btn-md btn-dark mr-16" data-toggle="modal" data-target="#modal">Assign Job</a>
-                                <span class="user-contact">
-                                    <a href="mailto: storm_mark@gmail.com">storm_mark@gmail.com</a><br>
-                                    <span class="phone">604 449-8824</span>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span class="subItem no-wrap">
+                                    <span class="typeLink typeLink-red"></span> Mike Dick
                                 </span>
-                            </div>
-                        </div>
-                    </div>
-                </th>
-                <td>
-                    <div class="table-panel-current-time" style="width: 21.31%"></div>
-                    <button type="button" class="time-block time-block-available" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block time-block-available" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block time-block-available" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-            </tr>
-            <tr>
-                <th><strong class="font-18 px-8">Incoming:</strong></th>
-                <td>
-                    <div class="table-panel-current-time" style="width: 21.31%"></div>
-                </td>
-                <td colspan="8"></td>
-            </tr>
-            <tr>
-                <th>
-                    <a class="btn-collapse no-wrap" data-toggle="collapse" href="#collapse_AlexanderHeverendy" role="button" aria-expanded="false" aria-controls="collapse_JosephCornstorck">
-                        Joseph Cornstorck <span class="score">78</span>
-                    </a>
-                    <div class="collapse" id="collapse_JosephCornstorck">
-                        <div class="collapse-body">
-                            <div class="user-info">
-                                <div class="user-info-crew">
-                                    <div class="badge badge-blue mr-8">Shamrock</div> Crew
+                            </th>
+                            <td>
+                                <div class="table-panel-current-time" style="width: 71.31%"></div>
+                                <div type="button" class="time-block">
+                                    <button type="button" class="time-block-busy" data-toggle="modal" data-target="#modal" style="width: 90.31%"></button>
+                                    <button type="button" class="time-block-available" data-toggle="modal" data-target="#modal"></button>
                                 </div>
-                                <div class="user-info-zone">
-                                    Zone <div class="badge badge-gray ml-8">Pitt Meadows</div>
+                            </td>
+                            <td>
+                                <div class="time-block">
+                                    <button type="button" class="time-block-available" data-toggle="modal" data-target="#modal"></button>
                                 </div>
-                            </div>
-                            <hr>
-                            <div class="user-actions">
-                                <a href="" class="btn btn-md btn-dark mr-16" data-toggle="modal" data-target="#modal">Assign Job</a>
-                                <span class="user-contact">
-                                    <a href="mailto: storm_mark@gmail.com">storm_mark@gmail.com</a><br>
-                                    <span class="phone">604 449-8824</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </th>
-                <td>
-                    <div class="table-panel-current-time" style="width: 21.31%"></div>
-                    <button type="button" class="time-block time-block-available" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block time-block-available" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block time-block-available" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-                <td>
-                    <button type="button" class="time-block" data-toggle="modal" data-target="#modal"></button>
-                </td>
-            </tr>
-        </table>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                            <td>
+                                <div class="time-block"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="py-1" colspan="10"></th>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
     </div>
 
-
-
     <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="modalLabel">Assigning Job to:</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                        <span aria-hidden="true" class="icon-close"></span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <form>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Input text:</label>
-                            <input type="text" class="form-control" id="recipient-name">
+
+                        <div class="employee">
+                            <div class="employee-name">
+                                <strong>Mark Storm <sup>Shoveller</sup></strong>
+                            </div>
+                            <div class="employee-contact">
+                                <a href="">strom_mike@gmail.com</a><br>
+                                (545)435-5454 545
+                            </div>
+                            <span class="employee-score">70</span>
+                            <div class="action">
+                                <button type="button" class="block-close"><i class="icon-close"></i></button>
+                            </div>
                         </div>
+
+                        <div class="employee">
+                            <div class="employee-name">
+                                <strong>Mark Storm <sup>Shoveller</sup></strong>
+                            </div>
+                            <div class="employee-contact">
+                                <a href="">strom_mike@gmail.com</a><br>
+                                (545)435-5454 545
+                            </div>
+                            <span class="employee-score">70</span>
+                            <div class="action">
+                                <button type="button" class="block-close"><i class="icon-close"></i></button>
+                            </div>
+                        </div>
+
                         <div class="form-group">
-                            <label for="inputGroupSelect01" class="col-form-label">Select:</label>
-                            <select class="custom-select" id="inputGroupSelect01">
-                                <option selected>Choose...</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                            <div class="form-row">
+                                <div class="col-md-4">
+                                    <label for="recipient-name" class="col-form-label">Input text:</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="custom-radio custom-btn-radio custom-control-inline">
+                                <input type="radio" name="radio-zone" id="a1" class="custom-control-input">
+                                <label class="custom-control-label py-3" for="a1"><strong class="font-18 d-block">Colborne Lane</strong> <small class="d-block mt-n1">3400 Devonshire</small> Zone 1</label>
+                            </div>
+                            <div class="custom-radio custom-btn-radio custom-control-inline">
+                                <input type="radio" name="radio-zone" id="a2" class="custom-control-input">
+                                <label class="custom-control-label py-3" for="a2"><strong class="font-18 d-block">Collaseum Dr</strong> <small class="d-block mt-n1">8920 Riverroad</small> Zone 4</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-form-label" for="activity_id">Select:</label>
+                            <select class="custom-select selectpicker" id="activity_id" name="job_form[activity_id]" data-live-search="true">
+                                <option value="">-- select --</option>
+                                <option value="1">Second Activity (Boczna 4)</option>
+                                <option value="2">First activity (Boczna 2, 05-092 Łomianki)</option>
+                                <option value="4">Trillium / Summerlin (2998 Silver Springs Boulevard)</option>
                             </select>
                         </div>
+
+                        <label>Sub-activity:</label>
+                        <div class="form-group">
+                            <div class="custom-radio custom-btn-radio custom-control-inline">
+                                <input type="radio" name="radio-activity" id="sa1" class="custom-control-input">
+                                <label class="custom-control-label" for="sa1">None</label>
+                            </div>
+                            <div class="custom-radio custom-btn-radio custom-control-inline">
+                                <input type="radio" name="radio-activity" id="sa2" class="custom-control-input">
+                                <label class="custom-control-label" for="sa2">Salting</label>
+                            </div>
+                            <div class="custom-radio custom-btn-radio custom-control-inline">
+                                <input type="radio" name="radio-activity" id="sa3" class="custom-control-input">
+                                <label class="custom-control-label" for="sa3">Snow</label>
+                            </div>
+                            <div class="custom-radio custom-btn-radio custom-control-inline">
+                                <input type="radio" name="radio-activity" id="sa4" class="custom-control-input">
+                                <label class="custom-control-label" for="sa4">PHP</label>
+                            </div>
+                        </div>
+
+
                         <div class="form-group">
                             <label for="message-text" class="col-form-label">Textarea:</label>
                             <textarea class="form-control" id="message-text"></textarea>
                         </div>
+
+                        <label>Activity Time:</label>
+                        <div class="form-group">
+                            <div class="custom-radio custom-btn-radio custom-control-inline">
+                                <input type="radio" name="radioTime" id="t15" class="custom-control-input" >
+                                <label class="custom-control-label" for="t15">15</label>
+                            </div>
+
+                            <div class="custom-radio custom-btn-radio custom-control-inline">
+                                <input type="radio" name="radioTime" id="t30" class="custom-control-input" >
+                                <label class="custom-control-label" for="t30">30</label>
+                            </div>
+
+                            <div class="custom-radio custom-btn-radio custom-control-inline">
+                                <input type="radio" name="radioTime" id="t45" class="custom-control-input" >
+                                <label class="custom-control-label" for="t45">45</label>
+                            </div>
+                        </div>
+
+
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -366,5 +553,98 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal2Label">All Activity for Mark Storm</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="icon-close"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="block-row">
+                        <div class="time-set time-set-busy">
+                            <div class="time-set-start" data-time-start="12:15"></div>
+                            <div class="time-set-total" data-time-total="30m"></div>
+                            <div class="time-set-end" data-time-end="12:45"></div>
+                        </div>
+                        <div class="place">
+                            <div class="place-code bg-gray-500">
+                                Z1
+                            </div>
+                            <div class="place-address">
+                                <strong>Stanton House <sup>Salting</sup></strong>
+                                <p>607 Cottonwood Avenue</p>
+                            </div>
+                        </div>
+                        <div class="action">
+                            <button type="button" class="block-hide-btn">No Show</button>
+                            <button type="button" class="block-close"><i class="icon-close"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="block-row">
+                        <div class="time-set time-set-busy">
+                            <div class="time-set-start" data-time-start="12:15"></div>
+                            <div class="time-set-total" data-time-total="30m"></div>
+                            <div class="time-set-end" data-time-end="12:45"></div>
+                        </div>
+                        <div class="place">
+                            <div class="place-code">
+                                Z1
+                            </div>
+                            <div class="place-address">
+                                <strong>Stanton House <sup>Salting</sup></strong>
+                                <p>607 Cottonwood Avenue</p>
+                            </div>
+                        </div>
+                        <div class="action">
+                            <button type="button" class="block-hide-btn">No Show</button>
+                            <button type="button" class="block-close"><i class="icon-close"></i></button>
+                        </div>
+                    </div>
+
+
+                    <div class="block-row block-row-completed" data-completed="COMPLETED">
+                        <div class="time-set">
+                            <div class="time-set-start" data-time-start="12:15"></div>
+                            <div class="time-set-total" data-time-total="30m"></div>
+                            <div class="time-set-end" data-time-end="12:45"></div>
+                        </div>
+
+                        <div class="place">
+                            <div class="place-code">
+                                Z1
+                            </div>
+                            <div class="place-address">
+                                <strong>Stanton House <sup>Salting</sup></strong>
+                                <p>607 Cottonwood Avenue</p>
+                            </div>
+                        </div>
+
+                        <div class="action">
+                            <div class="block-check"><i class="icon-check"></i></div>
+                            <button type="button" class="block-close"><i class="icon-close"></i></button>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
+
+<script>
+    $(document).ready( function() {
+
+        $('#activity_id').selectpicker();
+
+    });
+</script>

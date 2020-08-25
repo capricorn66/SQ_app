@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap&subset=latin-ext" rel="stylesheet">
+
+<link href="css/app.min.css" rel="stylesheet"></head>
+<body class="dispatcher-app">
+
+    <header>
+        <div class="container-fluid">
+            <div class="user-nav flex-wrap">
+                <div class="col-sm-6 col-md-4 py-10">
+                    <div class="current-time">
+                        Curent Time: <strong>01:21 AM</strong>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 text-sm-right text-md-center py-10">
+                    <div class="zone">
+                        <strong>Zone2</strong> (Coquitlam West)
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center justify-content-end py-10">
+                        Hi, Kevin Smith
+                        <a href="" class="btn btn-primary btn-sm ml-4">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <img src="images/snow-queen.svg" alt="SNOW QUEEN" class="brand">
+        </div>
+
+        <div class="container">
+            <nav>
+                <div class="nav nav-tabs" role="tablist">
+                    <a href="" class="nav-link active" id="nav-property-tab" role="tab" aria-controls="nav-property" aria-selected="false">Property List</a>
+                    <a href="" class="nav-link" id="nav-availability-tab" role="tab" aria-controls="nav-availability" aria-selected="true">Op. Availability</a>
+                    <a href="" class="nav-link" id="nav-roster-tab" role="tab" aria-controls="nav-roster" aria-selected="false">Op. Roster</a>
+                    <a href="" class="nav-link ml-auto" id="nav-ordersr-tab" role="tab" aria-controls="nav-orders" aria-selected="false">SSQ Orders(17)</a>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="nav-availability" role="tabpanel" aria-labelledby="nav-availability-tab">
+
+            <div class="container-fluid">
+
+                <div class="mb-3">
+                    <a href="" class="btn btn-primary btn-md">Back</a>
+                </div>
+
+                <div class="box bg-gray-200 mb-30">
+                    <div class="d-flex mb-4">
+                        <div class="pr-4">
+                            <strong class="d-flex align-items-center mb-1">
+                                <span class="font-18">Colbourne lane</span>
+                                <div class="badge badge-red ml-2">H</div>
+                            </strong>
+                            <small class="font-14">3289 Comp Lane, Coquitlam</small>
+                            <div class="my-3">
+                                <a href="" class="btn btn-blue">Create New Visit</a>
+                            </div>
+                        </div>
+                        <div class="ml-auto text-right">
+                            <small class="gray-500">Property Manager</small>
+                            <strong class="font-18 d-block my-1">Janise Spring</strong>
+                            <span class="gray-500">(604) 688-3772</span>
+
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-3">
+                        Active Visits:
+                        <div class="d-flex ml-auto">
+                            <div class="font-11 gray-500 d-flex align-items-center ml-4"><div class="badge badge-sm badge-blue mr-2">&nbsp;</div> in Progress</div>
+                            <div class="font-11 gray-500 d-flex align-items-center ml-4"><div class="badge badge-sm badge-green mr-2">&nbsp;</div> Finished</div>
+                            <div class="font-11 gray-500 d-flex align-items-center ml-4"><div class="badge badge-sm badge-gray mr-2">&nbsp;</div> On The Way</div>
+                        </div>
+                    </div>
+
+                    <div class="box bg-white box-sm font-14 py-15 mb-30">
+
+                        <strong class="d-flex align-items-center mb-1">
+                            <span class="font-22">Snow Removal</span>
+                            <div class="ml-auto font-12">
+                                <span class="gray-500">Dispatched</span> Nov 3
+                                <span class="gray-500">at</span> 6:40 pm
+                                <span class="gray-500">(30 min ago)</span>
+                            </div>
+                        </strong>
+                        <hr class="mb-40">
+                        <div class="row">
+                            <div class="col-sm-8">
+
+                                <div class="mb-30">
+                                    <div class="row">
+                                        <div class="col-sm-9 d-flex align-items-center">
+                                            <span class="font-16">Equipment & Operator Overview</span>
+                                            <a href="" class="btn btn-primary btn-md ml-auto">Edit</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-30">
+                                    <div class="row">
+                                        <div class="col-sm-9">
+                                            <span class="badge badge-type badge-gray px-1 mr-2">MPT</span> Est. Visit Time <strong>25m</strong>
+                                            <hr class="my-2">
+                                        </div>
+                                    </div>
+                                    <div class="row gutter-sm mb-1">
+                                        <div class="col-sm-9">
+                                            <div class="d-flex align-items-center">
+                                                <div class="badge badge-sm badge-blue mr-10 ml-30">&nbsp;</div>
+                                                <div class="box box-sm d-flex align-items-center flex-grow-1 bg-gray-200 gray-700 font-weight-light">
+                                                    <span><span class="badge badge-type badge-gray px-1 mr-10">MPT</span> Janice Price</span>
+                                                    <span class="ml-auto">Arr.at 7:00pm</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 gray-400 font-12 d-flex align-items-center">
+                                            Ext. 35m<br> (7:25pm)
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-30">
+                                    <div class="row">
+                                        <div class="col-sm-9">
+                                            <span class="badge badge-type badge-gray px-1 mr-2">MPT</span> Est. Visit Time <strong>40m</strong>
+                                            <hr class="my-2">
+                                        </div>
+                                    </div>
+                                    <div class="row gutter-sm mb-1">
+                                        <div class="col-sm-9">
+                                            <div class="d-flex align-items-center">
+                                                <div class="badge badge-sm badge-lightgray mr-10 ml-30">&nbsp;</div>
+                                                <div class="box box-sm d-flex align-items-center flex-grow-1 bg-gray-200 gray-700 font-weight-light">
+                                                    <span><span class="badge badge-type badge-gray px-1 mr-10">MPT</span> Janice Price</span>
+                                                    <span class="ml-auto">Arr.at 7:00pm</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 gray-400 font-12 d-flex align-items-center">
+                                            Ext. 35m<br> (7:25pm)
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-30">
+                                    <div class="row">
+                                        <div class="col-sm-9">
+                                            <span class="badge badge-type badge-gray px-1 mr-2">SVLx2</span> Est. Visit Time <strong>1h</strong>
+                                            <hr class="my-2">
+                                        </div>
+                                    </div>
+                                    <div class="row gutter-sm mb-1">
+                                        <div class="col-sm-9">
+                                            <div class="d-flex align-items-center">
+                                                <div class="badge badge-sm badge-blue mr-10 ml-30">&nbsp;</div>
+                                                <div class="box box-sm d-flex align-items-center flex-grow-1 bg-gray-200 gray-700 font-weight-light">
+                                                    <span><span class="badge badge-type badge-gray px-1 mr-10">SVLx4</span> Janice Dick</span>
+                                                    <span class="ml-auto">Arr.at 7:00pm</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 gray-400 font-12 d-flex align-items-center">
+                                            Ext. 35m<br> (7:25pm)
+                                        </div>
+                                    </div>
+                                    <div class="row gutter-sm mb-1">
+                                        <div class="col-sm-9 pl-30">
+                                            <div class="box box-sm d-flex align-items-center bg-gray-200 subItem gray-700 font-weight-light ml-100">
+                                                <span class="typeLink ml-0"></span> Stave Dick
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row gutter-sm mb-1">
+                                        <div class="col-sm-9 pl-30">
+                                            <div class="box box-sm d-flex align-items-center bg-gray-200 subItem gray-700 font-weight-light ml-100">
+                                                <span class="typeLink ml-0"></span> John Dick
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row gutter-sm mb-1">
+                                        <div class="col-sm-9 pl-30">
+                                            <div class="box box-sm d-flex align-items-center bg-gray-200 subItem gray-700 font-weight-light ml-100">
+                                                <span class="typeLink typeLink-red ml-0"></span> Mike Dick
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="box py-30 bg-gray-100 text-center">
+                                    <div class="app-color-2 font-22 mb-30">In PROGRESS</div>
+
+                                    <div class="gray-500">Estimated Completion</div>
+                                    <div class="font-30 my-2">8:10 pm</div>
+                                    <div class="gray-500 mt-10 mb-40">(in 1h)</div>
+
+                                    <a href="" class="btn btn-block btn-green">Mark Completed</a>
+                                    <a href="" class="btn btn-block btn-secondary">Cancel Visit</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="box bg-white box-sm font-14 py-15 mb-30">
+
+                        <strong class="d-flex align-items-center mb-1">
+                            <span class="font-22">Salting</span>
+                            <div class="ml-auto font-12">
+                                <span class="gray-500">Dispatched</span> Nov 3
+                                <span class="gray-500">at</span> 6:40 pm
+                                <span class="gray-500">(30 min ago)</span>
+                            </div>
+                        </strong>
+                        <hr class="mb-40">
+                        <div class="row">
+                            <div class="col-sm-8">
+
+                                <div class="mb-30">
+                                    <div class="row">
+                                        <div class="col-sm-9 d-flex align-items-center">
+                                            <span class="font-16">Equipment & Operator Overview</span>
+                                            <a href="" class="btn btn-primary btn-md ml-auto">Edit</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-30">
+                                    <div class="row">
+                                        <div class="col-sm-9">
+                                            <span class="badge badge-type badge-gray px-1 mr-2">MPT</span> Est. Visit Time <strong>25m</strong>
+                                            <hr class="my-2">
+                                        </div>
+                                    </div>
+                                    <div class="row gutter-sm mb-1">
+                                        <div class="col-sm-9">
+                                            <div class="d-flex align-items-center">
+                                                <div class="badge badge-sm badge-green mr-10 ml-30">&nbsp;</div>
+                                                <div class="box box-sm d-flex align-items-center flex-grow-1 bg-gray-200 gray-700 font-weight-light">
+                                                    <span><span class="badge badge-type badge-gray px-1 mr-10">MPT</span> Janice Price</span>
+                                                    <span class="ml-auto">Arr.at 7:00pm</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 gray-400 font-12 d-flex align-items-center">
+                                            Arr. at 5:49pm<br>
+                                            Fin. at 6:49pm
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="box py-30 bg-gray-100 text-center">
+                                    <div class="font-22 mb-30">WORK FINISHED</div>
+
+                                    <div class="gray-500">Estimated Completion</div>
+                                    <div class="font-30 my-2">8:10 pm</div>
+                                    <div class="gray-500 mt-10 mb-40">(in 1h)</div>
+
+                                    <a href="" class="btn btn-block btn-green">Mark Completed</a>
+                                    <a href="" class="btn btn-block btn-secondary">Cancel Visit</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row gutter-sm flex-nowrap box box-sm font-14 gray-600">
+                        <div class="col-sm-7">Complited Visits: (Last 72 Hours)</div>
+                        <div class="col-sm-3 d-flex justify-content-between">
+                            <span>Arrived</span>
+                            <span>Completed</span>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                    <div class="row gutter-sm flex-nowrap box box-sm bg-white font-12 align-items-center mb-2">
+                        <div class="col-sm-3">Snow Removal</div>
+                        <div class="col-sm-4">
+                            <span class="gray-500">Dispatched</span> Nov 3
+                            <span class="gray-500">at</span> 6:40 pm
+                        </div>
+                        <div class="col-sm-3 d-flex justify-content-between">
+                            <span>3:01pm</span>
+                            <span>------</span>
+                            <span>3:55pm</span>
+                        </div>
+                        <div class="col-sm-2 text-right">
+                            <a href="" class="btn btn-primary btn-sm my-1">Details</a>
+                        </div>
+                    </div>
+                    <div class="row gutter-sm flex-nowrap box box-sm bg-white font-12 align-items-center mb-2">
+                        <div class="col-sm-3">Snow Removal</div>
+                        <div class="col-sm-4">
+                            <span class="gray-500">Dispatched</span> Nov 3
+                            <span class="gray-500">at</span> 6:40 pm
+                        </div>
+                        <div class="col-sm-3 d-flex justify-content-between">
+                            <span>3:01pm</span>
+                            <span>------</span>
+                            <span>3:55pm</span>
+                        </div>
+                        <div class="col-sm-2 text-right">
+                            <a href="" class="btn btn-primary btn-sm my-1">Details</a>
+                        </div>
+                    </div>
+
+                    <div class="text-center py-20">
+                        <a href="" class="btn btn-primary btn-sm">Load More</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<script type="text/javascript" src="js/vendors~app.min.js"></script><script type="text/javascript" src="js/app.min.js"></script></body>
+</html>

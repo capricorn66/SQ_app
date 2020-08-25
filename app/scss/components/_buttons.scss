@@ -1,6 +1,13 @@
 /* buttons
 *******************************************************************/
 
+.btn-white {
+    background: white;
+    border: 1px solid white;
+    color: $gray-600;
+}
+
+
 .btn-primary {
     background: $gray-600;
     border: 1px solid $gray-600;
@@ -16,6 +23,10 @@
     &.active {
         background: $app-color-2 !important;
         border: 1px solid $app-color-2 !important;
+    }
+    &.disabled {
+        background: rgba($gray-600, .5);
+        border: 1px solid rgba($gray-600, .5);
     }
 }
 
@@ -48,17 +59,113 @@
     }
 }
 
+.btn-green {
+    background: lighten($app-color-1, 5%);
+    border: 1px solid lighten($app-color-1, 5%);
+    color: white;
+    white-space: nowrap;
+    &:active,
+    &:focus,
+    &:hover {
+        background: lighten($app-color-1, 10%);
+        border: 1px solid lighten($app-color-1, 10%);
+        box-shadow: none;
+        color: white;
+    }
+}
+
+.btn-blue {
+    background: lighten($app-color-3, 5%);
+    border: 1px solid lighten($app-color-3, 5%);
+    color: white;
+    white-space: nowrap;
+    &:active,
+    &:focus,
+    &:hover {
+        background: lighten($app-color-3, 10%);
+        border: 1px solid lighten($app-color-3, 10%);
+        box-shadow: none;
+        color: white;
+    }
+}
+
+.btn-yellow {
+    background: $app-color-6;
+    border: 1px solid $app-color-6;
+    color: white;
+    white-space: nowrap;
+    &:active,
+    &:focus,
+    &:hover {
+        background: darken($app-color-6, 8%);
+        border: 1px solid darken($app-color-6, 8%);
+        box-shadow: none;
+        color: white;
+    }
+}
+
+.subItem,
 .btn-collapse {
-    background: rgba($gray-400,.5);
-    padding: 8px 56px 9px 8px;
+    background: rgba($gray-400,.3);
+    padding: 8px 36px 9px 8px;
     line-height: 1.2em;
-    height: 36px;
+    height: 35px;
     display: block;
     color: $gray-600;
+    font-size: 12px;
+    font-weight: 500;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    .typeLink {
+        font-weight: 500;
+        margin: 1px 22px 1px 18px;
+        width: 16px;
+        display: inline-block;
+        text-align: center;
+        height: 8px;
+        border-left: 1px solid $gray-700;
+        border-bottom: 1px solid $gray-700;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $gray-700;
+            top: 2px;
+            left: 10px;
+        }
+        &.typeLink-red {
+            border-left: 1px solid lighten($app-color-4, 15%);
+            border-bottom: 1px solid lighten($app-color-4, 15%);
+            &::after {
+                background-color: lighten($app-color-4, 15%);
+            }
+        }
+    }
+}
+
+.btn-collapse {
     position: relative;
-    font-size: 16px;
-    font-weight: 600;
-    text-shadow: 1px 1px rgba(white,.4);
+    sup {
+        color: $gray-400;
+    }
+    .type {
+        background-color: $gray-700;
+        color: $white;
+        font-weight: 500;
+        padding: 2px 4px 1px 4px;
+        border-radius: 4px;
+        margin-right: 6px;
+        min-width: 50px;
+        display: inline-block;
+        text-align: center;
+        height: 18px;
+        line-height: 1.1em;
+    }
     .score {
         background: $app-color-1;
         color: $white;
@@ -112,8 +219,8 @@
 }
 
 .btn {
-    padding: 0 16px 1px;
-    border-radius: 8px;
+    padding: 0 16px 2px;
+    border-radius: 6px;
     font-weight: 500;
     transition: all linear .2s;
     display: -webkit-inline-box;
@@ -122,10 +229,11 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     height: 46px;
     &.btn-sm {
-        border-radius: 8px;
-        padding: 0 8px 1px;
+        padding: 0 12px 1px;
         height: 26px;
     }
     &.btn-md {
