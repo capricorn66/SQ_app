@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap&subset=latin-ext" rel="stylesheet">
+
+<link href="css/app.min.css" rel="stylesheet"></head>
+<body class="dispatcher-app">
+
+    <header>
+        <div class="container-fluid">
+            <div class="user-nav flex-wrap">
+                <div class="col-sm-6 col-md-4 py-10">
+                    <div class="current-time">
+                        Curent Time: <strong>01:21 AM</strong>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 text-sm-right text-md-center py-10">
+                    <div class="zone">
+                        <strong>Zone2</strong> (Coquitlam West)
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center justify-content-end py-10">
+                        Hi, Kevin Smith
+                        <a href="" class="btn btn-primary btn-sm ml-4">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <img src="images/snow-queen.svg" alt="SNOW QUEEN" class="brand">
+        </div>
+
+        <div class="container">
+            <nav>
+                <div class="nav-scroll nav-tabs-scroll">
+                    <div class="nav-scroll-container">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a href="" class="nav-link" id="nav-property-tab" role="tab" aria-controls="nav-property" aria-selected="false">Property List</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="" class="nav-link" id="nav-availability-tab" role="tab" aria-controls="nav-availability" aria-selected="true">Op. Availability</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="" class="nav-link" id="nav-roster-tab" role="tab" aria-controls="nav-roster" aria-selected="false">Op. Roster</a>
+                            </li>
+                            <li class="nav-item ml-auto" role="presentation">
+                                <a href="" class="nav-link active" id="nav-orders-tab" role="tab" aria-controls="nav-orders" aria-selected="false">SSQ Orders(17)</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="nav-availability" role="tabpanel" aria-labelledby="nav-orders-tab">
+
+            <div class="container-fluid">
+
+                <div class="mb-3">
+                    <a href="" class="btn btn-primary btn-md">Back</a>
+                </div>
+
+                <div class="box bg-gray-200 mb-30">
+
+                    <strong class="d-block font-20 py-2 mb-3">Creating <span class="app-color-2">New Visit</span> for Shovel Squad Order</strong>
+
+                    <div class="box bg-white box-sm font-14 py-15 mb-30">
+
+                        <div class="row">
+                            <div class="col-sm-6 mb-40">
+
+                                <div class="font-18 mb-10">Residential Order:</div>
+                                <p class="gray-500 mb-20">
+                                    Order Placed: Nov 19 at 4:57 pm<br>
+                                    Dispatch By: Nov 19 at 10:57 pm (in 2 h 18 min)
+                                </p>
+
+                                <div class="font-16 mb-10">Steven's Home</div>
+                                <p class="gray-500 mb-20">
+                                    15063 96 ave, Coquitiam, BC<br>
+                                    Steven Bams (604) 789-5738
+                                </p>
+
+                                <div class="font-16 mb-10">Driveway Conditions:</div>
+                                <ul class="gray-500 mb-30">
+                                    <li>Snow is fresh.</li>
+                                    <li>No ice on driveway.</li>
+                                    <li>Snow is not wal ked on or driven over.</li>
+                                    <li>Snow Amount (1- 6 inches)</li>
+                                </ul>
+
+                                <div class="font-16 mb-10">Customer Notes:</div>
+                                <p class="gray-500 mb-20">There are pots on either side of the garage entrance, please be sure not to knock
+                                    those over as they are very brittle during the winter.</p>
+
+                            </div>
+                            <div class="col-vr d-none d-sm-block"></div>
+                            <div class="col-sm-6 mb-40">
+                                <div class="d-flex flex-column flex-md-row align-items-md-center">
+                                    <div class="font-22 mb-20">Property Aerial:</div>
+                                    <span class="badge badge-red mb-20 ml-md-auto ml-0 px-2">Priority Order - 6H</span>
+                                </div>
+                                <img src="images/ssq-1.jpg" class="img-fluid mb-20" height="390" width="465"/>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                       <span class="gray-500">Total</span> SF2: 1,280
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="d-flex align-items-center mb-2">
+                                            City Sidewalk:
+                                            <span class="badge badge-green badge-type ml-auto">Yes</span>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-2">
+                                            Driveway:
+                                            <span class="badge badge-green badge-type ml-auto">Yes</span>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-2">
+                                            Internal pathways:
+                                            <span class="badge badge-gray badge-type ml-auto">No</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 col-md-8">
+
+                                <div class="font-22 mb-30">Equipment & Operator Overview:</div>
+
+                                <div class="mb-30">
+                                    <div class="row">
+                                        <div class="col-sm-9 font-11">
+                                            <span class="badge badge-type badge-gray px-1 mr-2">MPT</span> Est. Visit Time <strong>25m</strong> <span class="gray-400 no-wrap">(+15min travel time)</span>
+                                            <hr class="my-2">
+                                        </div>
+                                    </div>
+                                    <div class="row gutter-sm mb-1">
+                                        <div class="col-sm-3 gray-400 font-12 d-flex align-items-center order-0 order-sm-1 justify-content-end justify-content-sm-start mb-2 mb-sm-0">
+                                            Ext. 1h 35m
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <div class="d-flex align-items-center">
+                                                <div class="box box-sm d-flex flex-column flex-sm-row align-items-sm-center flex-grow-1 bg-gray-200 gray-700 font-weight-light ml-60 ml-sm-80">
+                                                    <span class="my-1 my-sm-0"><span class="badge badge-type badge-gray px-1 mr-10">MPT</span> Janice Price</span>
+                                                    <a href="" class="btn btn-yellow btn-sm ml-auto">Edit</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-12 col-md-4">
+
+                                <div class="box py-30 bg-gray-100 text-center mb-30">
+                                    <div class="gray-500">Estimated Completion</div>
+                                    <div class="font-30 my-2">8:10 pm</div>
+                                    <div class="gray-500 mt-10">(in 1h)</div>
+                                </div>
+                                <a href="" class="btn btn-block btn-green">Create Visit </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<script type="text/javascript" src="js/vendors~app.min.js"></script><script type="text/javascript" src="js/app.min.js"></script></body>
+</html>

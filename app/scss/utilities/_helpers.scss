@@ -219,3 +219,16 @@
     }
 }
 
+.col-vr {
+    flex: 0 0 0;
+    position: relative;
+    padding: 0 !important;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: $gray-300;
+    }
+}

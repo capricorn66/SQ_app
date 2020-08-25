@@ -40,24 +40,35 @@
 
         <div class="container">
             <nav>
-                <div class="nav nav-tabs" role="tablist">
-                    <a href="" class="nav-link" id="nav-property-tab" role="tab" aria-controls="nav-property" aria-selected="false">Property List</a>
-                    <a href="" class="nav-link active" id="nav-availability-tab" role="tab" aria-controls="nav-availability" aria-selected="true">Op. Availability</a>
-                    <a href="" class="nav-link" id="nav-roster-tab" role="tab" aria-controls="nav-roster" aria-selected="false">Op. Roster</a>
-                    <a href="" class="nav-link ml-auto" id="nav-ordersr-tab" role="tab" aria-controls="nav-orders" aria-selected="false">SSQ Orders(17)</a>
+                <div class="nav-scroll nav-tabs-scroll">
+                    <div class="nav-scroll-container">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a href="" class="nav-link" id="nav-property-tab" role="tab" aria-controls="nav-property" aria-selected="false">Property List</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="" class="nav-link active" id="nav-availability-tab" role="tab" aria-controls="nav-availability" aria-selected="true">Op. Availability</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="" class="nav-link" id="nav-roster-tab" role="tab" aria-controls="nav-roster" aria-selected="false">Op. Roster</a>
+                            </li>
+                            <li class="nav-item ml-auto" role="presentation">
+                                <a href="" class="nav-link" id="nav-orders-tab" role="tab" aria-controls="nav-orders" aria-selected="false">SSQ Orders(17)</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </div>
 
     </header>
 
-
     <div class="tab-content">
         <div class="tab-pane fade show active" id="nav-availability" role="tabpanel" aria-labelledby="nav-availability-tab">
 
             <div class="container-fluid">
 
-                <div class="table-responssive">
+                <div class="table-responsive">
                     <table class="table-panel">
                         <tr>
                             <th class="text-center v-mid"></th>
@@ -430,142 +441,18 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal2Label" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalLabel">Assigning Job to:</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true" class="icon-close"></span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-
-                        <div class="employee">
-                            <div class="employee-name">
-                                <strong>Mark Storm <sup>Shoveller</sup></strong>
-                            </div>
-                            <div class="employee-contact">
-                                <a href="">strom_mike@gmail.com</a><br>
-                                (545)435-5454 545
-                            </div>
-                            <span class="employee-score">70</span>
-                            <div class="action">
-                                <button type="button" class="block-close"><i class="icon-close"></i></button>
-                            </div>
-                        </div>
-
-                        <div class="employee">
-                            <div class="employee-name">
-                                <strong>Mark Storm <sup>Shoveller</sup></strong>
-                            </div>
-                            <div class="employee-contact">
-                                <a href="">strom_mike@gmail.com</a><br>
-                                (545)435-5454 545
-                            </div>
-                            <span class="employee-score">70</span>
-                            <div class="action">
-                                <button type="button" class="block-close"><i class="icon-close"></i></button>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="form-row">
-                                <div class="col-md-4">
-                                    <label for="recipient-name" class="col-form-label">Input text:</label>
-                                    <input type="text" class="form-control" id="recipient-name">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="custom-radio custom-btn-radio custom-control-inline">
-                                <input type="radio" name="radio-zone" id="a1" class="custom-control-input">
-                                <label class="custom-control-label py-3" for="a1"><strong class="font-18 d-block">Colborne Lane</strong> <small class="d-block mt-n1">3400 Devonshire</small> Zone 1</label>
-                            </div>
-                            <div class="custom-radio custom-btn-radio custom-control-inline">
-                                <input type="radio" name="radio-zone" id="a2" class="custom-control-input">
-                                <label class="custom-control-label py-3" for="a2"><strong class="font-18 d-block">Collaseum Dr</strong> <small class="d-block mt-n1">8920 Riverroad</small> Zone 4</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-form-label" for="activity_id">Select:</label>
-                            <select class="custom-select selectpicker" id="activity_id" name="job_form[activity_id]" data-live-search="true">
-                                <option value="">-- select --</option>
-                                <option value="1">Second Activity (Boczna 4)</option>
-                                <option value="2">First activity (Boczna 2, 05-092 Łomianki)</option>
-                                <option value="4">Trillium / Summerlin (2998 Silver Springs Boulevard)</option>
-                            </select>
-                        </div>
-
-                        <label>Sub-activity:</label>
-                        <div class="form-group">
-                            <div class="custom-radio custom-btn-radio custom-control-inline">
-                                <input type="radio" name="radio-activity" id="sa1" class="custom-control-input">
-                                <label class="custom-control-label" for="sa1">None</label>
-                            </div>
-                            <div class="custom-radio custom-btn-radio custom-control-inline">
-                                <input type="radio" name="radio-activity" id="sa2" class="custom-control-input">
-                                <label class="custom-control-label" for="sa2">Salting</label>
-                            </div>
-                            <div class="custom-radio custom-btn-radio custom-control-inline">
-                                <input type="radio" name="radio-activity" id="sa3" class="custom-control-input">
-                                <label class="custom-control-label" for="sa3">Snow</label>
-                            </div>
-                            <div class="custom-radio custom-btn-radio custom-control-inline">
-                                <input type="radio" name="radio-activity" id="sa4" class="custom-control-input">
-                                <label class="custom-control-label" for="sa4">PHP</label>
-                            </div>
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="message-text" class="col-form-label">Textarea:</label>
-                            <textarea class="form-control" id="message-text"></textarea>
-                        </div>
-
-                        <label>Activity Time:</label>
-                        <div class="form-group">
-                            <div class="custom-radio custom-btn-radio custom-control-inline">
-                                <input type="radio" name="radioTime" id="t15" class="custom-control-input" >
-                                <label class="custom-control-label" for="t15">15</label>
-                            </div>
-
-                            <div class="custom-radio custom-btn-radio custom-control-inline">
-                                <input type="radio" name="radioTime" id="t30" class="custom-control-input" >
-                                <label class="custom-control-label" for="t30">30</label>
-                            </div>
-
-                            <div class="custom-radio custom-btn-radio custom-control-inline">
-                                <input type="radio" name="radioTime" id="t45" class="custom-control-input" >
-                                <label class="custom-control-label" for="t45">45</label>
-                            </div>
-                        </div>
-
-
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-dark">Save</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modal2Label" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modal2Label">All Activity for Mark Storm</h5>
+                    <h5 class="modal-title" id="modal2Label">Assigned Jobs for Matthew Dylewski <sup>(Management)</sup></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true" class="icon-close"></span>
                     </button>
                 </div>
                 <div class="modal-body">
 
-                    <div class="block-row">
+                    <div class="block-row block-row-header" data-header="UPCOMING">
                         <div class="time-set time-set-busy">
                             <div class="time-set-start" data-time-start="12:15"></div>
                             <div class="time-set-total" data-time-total="30m"></div>
@@ -581,7 +468,6 @@
                             </div>
                         </div>
                         <div class="action">
-                            <button type="button" class="block-hide-btn">No Show</button>
                             <button type="button" class="block-close"><i class="icon-close"></i></button>
                         </div>
                     </div>
@@ -602,17 +488,16 @@
                             </div>
                         </div>
                         <div class="action">
-                            <button type="button" class="block-hide-btn">No Show</button>
                             <button type="button" class="block-close"><i class="icon-close"></i></button>
                         </div>
                     </div>
 
+                    <div class="block-row">
 
-                    <div class="block-row block-row-completed" data-completed="COMPLETED">
                         <div class="time-set">
-                            <div class="time-set-start" data-time-start="12:15"></div>
+                            <div class="time-set-start" data-time-start=""></div>
                             <div class="time-set-total" data-time-total="30m"></div>
-                            <div class="time-set-end" data-time-end="12:45"></div>
+                            <div class="time-set-end" data-time-end=""></div>
                         </div>
 
                         <div class="place">
@@ -626,13 +511,13 @@
                         </div>
 
                         <div class="action">
-                            <div class="block-check"><i class="icon-check"></i></div>
                             <button type="button" class="block-close"><i class="icon-close"></i></button>
                         </div>
                     </div>
 
-
-
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-blue" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>

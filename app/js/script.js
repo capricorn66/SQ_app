@@ -1,6 +1,17 @@
-// JavaScript Document
-const rwdMedia = {};
+import $ from "jquery";
+import debounce from 'lodash.debounce';
+import "./hasAttr";
+import {rwdMedia} from "./rwdMedia";
+import {rippletInit} from './ripplet';
+import './nav-scroll';
 
-['xs', 'sm', 'md', 'lg', 'xl', 'sl'].map(
-    bp => rwdMedia[bp] = () => document.querySelector(`.bs4-${bp}`).offsetParent !== null
-);
+window.debounce = debounce;
+window.rwdMedia = rwdMedia;
+window.rippletInit = rippletInit;
+
+document.addEventListener('DOMContentLoaded', function(){
+
+    rippletInit();
+    $('.nav-scroll').navScroll();
+
+}, false);

@@ -40,11 +40,23 @@
 
         <div class="container">
             <nav>
-                <div class="nav nav-tabs" role="tablist">
-                    <a href="" class="nav-link" id="nav-property-tab" role="tab" aria-controls="nav-property" aria-selected="false">Property List</a>
-                    <a href="" class="nav-link" id="nav-availability-tab" role="tab" aria-controls="nav-availability" aria-selected="true">Op. Availability</a>
-                    <a href="" class="nav-link" id="nav-roster-tab" role="tab" aria-controls="nav-roster" aria-selected="false">Op. Roster</a>
-                    <a href="" class="nav-link active ml-auto" id="nav-ordersr-tab" role="tab" aria-controls="nav-orders" aria-selected="false">SSQ Orders(17)</a>
+                <div class="nav-scroll nav-tabs-scroll">
+                    <div class="nav-scroll-container">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a href="" class="nav-link" id="nav-property-tab" role="tab" aria-controls="nav-property" aria-selected="false">Property List</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="" class="nav-link" id="nav-availability-tab" role="tab" aria-controls="nav-availability" aria-selected="true">Op. Availability</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="" class="nav-link" id="nav-roster-tab" role="tab" aria-controls="nav-roster" aria-selected="false">Op. Roster</a>
+                            </li>
+                            <li class="nav-item ml-auto" role="presentation">
+                                <a href="" class="nav-link active" id="nav-orders-tab" role="tab" aria-controls="nav-orders" aria-selected="false">SSQ Orders(17)</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -53,123 +65,129 @@
 
 
     <div class="tab-content">
-        <div class="tab-pane fade show active" id="nav-availability" role="tabpanel" aria-labelledby="nav-availability-tab">
+        <div class="tab-pane fade show active" id="nav-availability" role="tabpanel" aria-labelledby="nav-orders-tab">
 
             <div class="container-fluid">
 
                 <h2 class="font-18">Pending</h2>
-                <div class="box bg-gray-200 mb-20">
-                    <div class="row gutter-sm flex-nowrap box box-sm font-14 gray-600">
-                        <div class="col-sm-3">Address:</div>
-                        <div class="col-sm-1 text-center">FT2:</div>
-                        <div class="col-sm-2 text-center">Priority:</div>
-                        <div class="col-sm-3">Order Data/Time</div>
-                        <div class="col-sm-1 no-wrap">Due In</div>
-                        <div class="col-sm-2"></div>
-                    </div>
-                    <div class="row gutter-sm flex-nowrap box box-sm bg-white font-12 align-items-center mb-2">
-                        <div class="col-sm-3">1999 Glenview Dr, Coquitlam, BC:</div>
-                        <div class="col-sm-1 text-center font-16">878</div>
-                        <div class="col-sm-2 text-center"><div class="badge badge-type badge-red px-1">6H</div></div>
-                        <div class="col-sm-3">Nov 3 <span class="gray-500">at</span> 6:40 pm<br> <span class="gray-500">(30 min ago)</span></div>
-                        <div class="col-sm-1 no-wrap">5h 30m</div>
-                        <div class="col-sm-2 text-right"><a href="" class="btn btn-blue btn-sm">Create Visit</a></div>
-                    </div>
-                    <div class="row gutter-sm flex-nowrap box box-sm bg-white font-12 align-items-center mb-2">
-                        <div class="col-sm-3">1999 Glenview Dr, Coquitlam, BC:</div>
-                        <div class="col-sm-1 text-center font-16">878</div>
-                        <div class="col-sm-2 text-center"><div class="badge badge-type badge-darkred px-1">12H</div></div>
-                        <div class="col-sm-3">Nov 3 <span class="gray-500">at</span> 6:40 pm<br> <span class="gray-500">(30 min ago)</span></div>
-                        <div class="col-sm-1 no-wrap">5h 30m</div>
-                        <div class="col-sm-2 text-right"><a href="" class="btn btn-blue btn-sm">Create Visit</a></div>
+                <div class="box-responsive">
+                    <div class="box bg-gray-200 mb-20">
+                        <div class="row gutter-sm flex-nowrap box box-sm font-14 gray-600">
+                            <div class="col-3">Address:</div>
+                            <div class="col-1 text-center">FT2:</div>
+                            <div class="col-2 text-center">Priority:</div>
+                            <div class="col-3">Order Data/Time</div>
+                            <div class="col-1 no-wrap">Due In</div>
+                            <div class="col-2"></div>
+                        </div>
+                        <div class="row gutter-sm flex-nowrap box box-sm bg-white font-12 align-items-center mb-2">
+                            <div class="col-3">1999 Glenview Dr, Coquitlam, BC:</div>
+                            <div class="col-1 text-center font-16">878</div>
+                            <div class="col-2 text-center"><div class="badge badge-type badge-red px-1">6H</div></div>
+                            <div class="col-3">Nov 3 <span class="gray-500">at</span> 6:40 pm<br> <span class="gray-500">(30 min ago)</span></div>
+                            <div class="col-1 no-wrap">5h 30m</div>
+                            <div class="col-2 text-right"><a href="" class="btn btn-blue btn-sm">Create Visit</a></div>
+                        </div>
+                        <div class="row gutter-sm flex-nowrap box box-sm bg-white font-12 align-items-center mb-2">
+                            <div class="col-3">1999 Glenview Dr, Coquitlam, BC:</div>
+                            <div class="col-1 text-center font-16">878</div>
+                            <div class="col-2 text-center"><div class="badge badge-type badge-darkred px-1">12H</div></div>
+                            <div class="col-3">Nov 3 <span class="gray-500">at</span> 6:40 pm<br> <span class="gray-500">(30 min ago)</span></div>
+                            <div class="col-1 no-wrap">5h 30m</div>
+                            <div class="col-2 text-right"><a href="" class="btn btn-blue btn-sm">Create Visit</a></div>
+                        </div>
                     </div>
                 </div>
 
                 <h2 class="font-18">Dispatched</h2>
-                <div class="box bg-gray-200 mb-20">
-                    <div class="row gutter-sm flex-nowrap box box-sm font-14 gray-600">
-                        <div class="col-sm-3">Address:</div>
-                        <div class="col-sm-1 text-center">FT2:</div>
-                        <div class="col-sm-2 text-center">Priority:</div>
-                        <div class="col-sm-1">Status:</div>
-                        <div class="col-sm-2">ETA:</div>
-                        <div class="col-sm-3"></div>
-                    </div>
-                    <div class="row gutter-sm flex-nowrap box box-sm bg-white font-12 align-items-center mb-2">
-                        <div class="col-sm-3">1999 Glenview Dr, Coquitlam, BC:</div>
-                        <div class="col-sm-1 text-center font-16">878</div>
-                        <div class="col-sm-2 text-center"><div class="badge badge-type badge-red px-1">6H</div></div>
-                        <div class="col-sm-1"><div class="badge badge-sm badge-blue d-inline-block">&nbsp;</div></div>
-                        <div class="col-sm-2 no-wrap">5h 30m</div>
-                        <div class="col-sm-3 text-right">
-                            <a href="" class="btn btn-primary btn-sm my-1">Details</a>
-                            <a href="" class="btn btn-green btn-sm disabled my-1">Complete Visit</a>
+                <div class="box-responsive">
+                    <div class="box bg-gray-200 mb-20">
+                        <div class="row gutter-sm flex-nowrap box box-sm font-14 gray-600">
+                            <div class="col-3">Address:</div>
+                            <div class="col-1 text-center">FT2:</div>
+                            <div class="col-2 text-center">Priority:</div>
+                            <div class="col-1">Status:</div>
+                            <div class="col-2">ETA:</div>
+                            <div class="col-3"></div>
                         </div>
-                    </div>
-                    <div class="row gutter-sm flex-nowrap box box-sm bg-white font-12 align-items-center mb-2">
-                        <div class="col-sm-3">1999 Glenview Dr, Coquitlam, BC:</div>
-                        <div class="col-sm-1 text-center font-16">878</div>
-                        <div class="col-sm-2 text-center"><div class="badge badge-type badge-darkred px-1">12H</div></div>
-                        <div class="col-sm-1"><div class="badge badge-sm badge-gray d-inline-block">&nbsp;</div></div>
-                        <div class="col-sm-2 no-wrap">5h 30m</div>
-                        <div class="col-sm-3 text-right">
-                            <a href="" class="btn btn-primary btn-sm my-1">Details</a>
-                            <a href="" class="btn btn-green btn-sm disabled my-1">Complete Visit</a>
+                        <div class="row gutter-sm flex-nowrap box box-sm bg-white font-12 align-items-center mb-2">
+                            <div class="col-3">1999 Glenview Dr, Coquitlam, BC:</div>
+                            <div class="col-1 text-center font-16">878</div>
+                            <div class="col-2 text-center"><div class="badge badge-type badge-red px-1">6H</div></div>
+                            <div class="col-1"><div class="badge badge-sm badge-blue d-inline-block">&nbsp;</div></div>
+                            <div class="col-2 no-wrap">5h 30m</div>
+                            <div class="col-3 text-right">
+                                <a href="" class="btn btn-primary btn-sm my-1">Details</a>
+                                <a href="" class="btn btn-green btn-sm disabled my-1">Complete Visit</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row gutter-sm flex-nowrap box box-sm bg-white font-12 align-items-center mb-2">
-                        <div class="col-sm-3">1999 Glenview Dr, Coquitlam, BC:</div>
-                        <div class="col-sm-1 text-center font-16">878</div>
-                        <div class="col-sm-2 text-center"><div class="badge badge-type badge-lightgray px-1">6H</div></div>
-                        <div class="col-sm-1"><div class="badge badge-sm badge-green d-inline-block">&nbsp;</div></div>
-                        <div class="col-sm-2 no-wrap">Completed</div>
-                        <div class="col-sm-3 text-right">
-                            <a href="" class="btn btn-primary btn-sm my-1">Details</a>
-                            <a href="" class="btn btn-green btn-sm my-1">Complete Visit</a>
+                        <div class="row gutter-sm flex-nowrap box box-sm bg-white font-12 align-items-center mb-2">
+                            <div class="col-3">1999 Glenview Dr, Coquitlam, BC:</div>
+                            <div class="col-1 text-center font-16">878</div>
+                            <div class="col-2 text-center"><div class="badge badge-type badge-darkred px-1">12H</div></div>
+                            <div class="col-1"><div class="badge badge-sm badge-gray d-inline-block">&nbsp;</div></div>
+                            <div class="col-2 no-wrap">5h 30m</div>
+                            <div class="col-3 text-right">
+                                <a href="" class="btn btn-primary btn-sm my-1">Details</a>
+                                <a href="" class="btn btn-green btn-sm disabled my-1">Complete Visit</a>
+                            </div>
+                        </div>
+                        <div class="row gutter-sm flex-nowrap box box-sm bg-white font-12 align-items-center mb-2">
+                            <div class="col-3">1999 Glenview Dr, Coquitlam, BC:</div>
+                            <div class="col-1 text-center font-16">878</div>
+                            <div class="col-2 text-center"><div class="badge badge-type badge-lightgray px-1">6H</div></div>
+                            <div class="col-1"><div class="badge badge-sm badge-green d-inline-block">&nbsp;</div></div>
+                            <div class="col-2 no-wrap">Completed</div>
+                            <div class="col-3 text-right">
+                                <a href="" class="btn btn-primary btn-sm my-1">Details</a>
+                                <a href="" class="btn btn-green btn-sm my-1">Complete Visit</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <h2 class="font-18">Completed <span class="gray-600 font-weight-light">(Last 72 Hours)</span></h2>
-                <div class="box bg-gray-200 mb-20">
-                    <div class="row gutter-sm flex-nowrap box box-sm font-14 gray-600">
-                        <div class="col-sm-3">Address:</div>
-                        <div class="col-sm-1 text-center">FT2:</div>
-                        <div class="col-sm-3 text-center">Total Job Time:</div>
-                        <div class="col-sm-3">Job Completed:</div>
-                        <div class="col-sm-2"></div>
-                    </div>
-                    <div class="row gutter-sm flex-nowrap box box-sm bg-white font-12 align-items-center mb-2">
-                        <div class="col-sm-3">1999 Glenview Dr, Coquitlam, BC:</div>
-                        <div class="col-sm-1 text-center font-16">878</div>
-                        <div class="col-sm-3 text-center">56m</div>
-                        <div class="col-sm-3">
-                            Nov 3 <span class="gray-500">at</span> 6:40 pm<br> <span class="gray-500">(30 min ago)</span>
+                <div class="box-responsive">
+                    <div class="box bg-gray-200 mb-20">
+                        <div class="row gutter-sm flex-nowrap box box-sm font-14 gray-600">
+                            <div class="col-3">Address:</div>
+                            <div class="col-1 text-center">FT2:</div>
+                            <div class="col-3 text-center">Total Job Time:</div>
+                            <div class="col-3">Job Completed:</div>
+                            <div class="col-2"></div>
                         </div>
-                        <div class="col-sm-2 text-right">
-                            <a href="" class="btn btn-primary btn-sm my-1">Details</a>
+                        <div class="row gutter-sm flex-nowrap box box-sm bg-white font-12 align-items-center mb-2">
+                            <div class="col-3">1999 Glenview Dr, Coquitlam, BC:</div>
+                            <div class="col-1 text-center font-16">878</div>
+                            <div class="col-3 text-center">56m</div>
+                            <div class="col-3">
+                                Nov 3 <span class="gray-500">at</span> 6:40 pm<br> <span class="gray-500">(30 min ago)</span>
+                            </div>
+                            <div class="col-2 text-right">
+                                <a href="" class="btn btn-primary btn-sm my-1">Details</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row gutter-sm flex-nowrap box box-sm bg-white font-12 align-items-center mb-2">
-                        <div class="col-sm-3">1999 Glenview Dr, Coquitlam, BC:</div>
-                        <div class="col-sm-1 text-center font-16">878</div>
-                        <div class="col-sm-3 text-center">2h 12m</div>
-                        <div class="col-sm-3">
-                            Nov 3 <span class="gray-500">at</span> 6:40 pm<br> <span class="gray-500">(30 min ago)</span>
+                        <div class="row gutter-sm flex-nowrap box box-sm bg-white font-12 align-items-center mb-2">
+                            <div class="col-3">1999 Glenview Dr, Coquitlam, BC:</div>
+                            <div class="col-1 text-center font-16">878</div>
+                            <div class="col-3 text-center">2h 12m</div>
+                            <div class="col-3">
+                                Nov 3 <span class="gray-500">at</span> 6:40 pm<br> <span class="gray-500">(30 min ago)</span>
+                            </div>
+                            <div class="col-2 text-right">
+                                <a href="" class="btn btn-primary btn-sm my-1">Details</a>
+                            </div>
                         </div>
-                        <div class="col-sm-2 text-right">
-                            <a href="" class="btn btn-primary btn-sm my-1">Details</a>
-                        </div>
-                    </div>
-                    <div class="row gutter-sm flex-nowrap box box-sm bg-white font-12 align-items-center mb-2">
-                        <div class="col-sm-3">1999 Glenview Dr, Coquitlam, BC:</div>
-                        <div class="col-sm-1 text-center font-16">878</div>
-                        <div class="col-sm-3 text-center">3h 7m</div>
-                        <div class="col-sm-3">
-                            Nov 3 <span class="gray-500">at</span> 6:40 pm<br> <span class="gray-500">(30 min ago)</span>
-                        </div>
-                        <div class="col-sm-2 text-right">
-                            <a href="" class="btn btn-primary btn-sm my-1">Details</a>
+                        <div class="row gutter-sm flex-nowrap box box-sm bg-white font-12 align-items-center mb-2">
+                            <div class="col-3">1999 Glenview Dr, Coquitlam, BC:</div>
+                            <div class="col-1 text-center font-16">878</div>
+                            <div class="col-3 text-center">3h 7m</div>
+                            <div class="col-3">
+                                Nov 3 <span class="gray-500">at</span> 6:40 pm<br> <span class="gray-500">(30 min ago)</span>
+                            </div>
+                            <div class="col-2 text-right">
+                                <a href="" class="btn btn-primary btn-sm my-1">Details</a>
+                            </div>
                         </div>
                     </div>
                 </div>

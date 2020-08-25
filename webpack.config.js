@@ -21,6 +21,8 @@ const htmlPanel = generateHtml('panel');
 const htmlPropertyList = generateHtml('propertyList');
 const htmlOrderList = generateHtml('orderList');
 const htmlPropertyDetails = generateHtml('propertyDetails');
+const htmlNewVisit = generateHtml('newVisit');
+const htmlNewVisitSSO = generateHtml('newVisit_SSO');
 
 module.exports = (env, options) => {
 
@@ -60,7 +62,9 @@ module.exports = (env, options) => {
             .concat(htmlPanel)
             .concat(htmlPropertyList)
             .concat(htmlOrderList)
-            .concat(htmlPropertyDetails),
+            .concat(htmlPropertyDetails)
+            .concat(htmlNewVisit)
+            .concat(htmlNewVisitSSO),
 
 
         optimization: {

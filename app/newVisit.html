@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap&subset=latin-ext" rel="stylesheet">
+
+</head>
+<body class="dispatcher-app">
+
+    <header>
+        <div class="container-fluid">
+            <div class="user-nav flex-wrap">
+                <div class="col-sm-6 col-md-4 py-10">
+                    <div class="current-time">
+                        Curent Time: <strong>01:21 AM</strong>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 text-sm-right text-md-center py-10">
+                    <div class="zone">
+                        <strong>Zone2</strong> (Coquitlam West)
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center justify-content-end py-10">
+                        Hi, Kevin Smith
+                        <a href="" class="btn btn-primary btn-sm ml-4">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <img src="images/snow-queen.svg" alt="SNOW QUEEN" class="brand">
+        </div>
+
+        <div class="container">
+            <nav>
+                <div class="nav-scroll nav-tabs-scroll">
+                    <div class="nav-scroll-container">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a href="" class="nav-link active" id="nav-property-tab" role="tab" aria-controls="nav-property" aria-selected="false">Property List</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="" class="nav-link" id="nav-availability-tab" role="tab" aria-controls="nav-availability" aria-selected="true">Op. Availability</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="" class="nav-link" id="nav-roster-tab" role="tab" aria-controls="nav-roster" aria-selected="false">Op. Roster</a>
+                            </li>
+                            <li class="nav-item ml-auto" role="presentation">
+                                <a href="" class="nav-link" id="nav-orders-tab" role="tab" aria-controls="nav-orders" aria-selected="false">SSQ Orders(17)</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="nav-availability" role="tabpanel" aria-labelledby="nav-property-tab">
+
+            <div class="container-fluid">
+
+                <div class="mb-3">
+                    <a href="" class="btn btn-primary btn-md">Back</a>
+                </div>
+
+                <div class="box bg-gray-200 mb-30">
+
+                    <strong class="d-block font-20 py-2 mb-3">Creating <span class="app-color-2">New Visit</span></strong>
+
+                    <div class="box bg-white box-sm font-14 py-15 mb-30">
+
+                        <div class="mb-40">
+                            <strong class="d-flex align-items-center mb-1">
+                                <span class="font-18">Colbourne lane</span>
+                                <div class="badge badge-red ml-2">H</div>
+                            </strong>
+                            <small class="font-14">3289 Comp Lane, Coquitlam</small>
+                            <div class="my-3">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-6">
+                                        <select class="custom-select custom-select-lg">
+                                            <option value="1" selected>Snow Removal</option>
+                                            <option value="2">Snow Removal</option>
+                                            <option value="4">Snow Removal</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="mb-20">
+
+                        <div class="font-22 mb-30">Equipment & Operator Overview:</div>
+
+                        <div class="row">
+                            <div class="col-12 col-md-8">
+
+                                <div class="mb-30">
+                                    <div class="row">
+                                        <div class="col-sm-9 font-11">
+                                            <span class="badge badge-type badge-gray px-1 mr-2">MPT</span> Est. Visit Time <strong>25m</strong> <span class="gray-400 no-wrap">(+15min travel time)</span>
+                                            <hr class="my-2">
+                                        </div>
+                                    </div>
+                                    <div class="row gutter-sm mb-1">
+                                        <div class="col-sm-9">
+                                            <div class="d-flex align-items-center">
+                                                <a href="" class="btn btn-primary btn-sm ml-auto">Add</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-30">
+                                    <div class="row">
+                                        <div class="col-sm-9 font-11">
+                                            <span class="badge badge-type badge-gray px-1 mr-2">MPT</span> Est. Visit Time <strong>25m</strong> <span class="gray-400 no-wrap">(+15min travel time)</span>
+                                            <hr class="my-2">
+                                        </div>
+                                    </div>
+                                    <div class="row gutter-sm mb-1">
+                                        <div class="col-sm-3 gray-400 font-12 d-flex align-items-center order-0 order-sm-1 justify-content-end justify-content-sm-start mb-2 mb-sm-0">
+                                            Ext. 1h 35m
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <div class="d-flex align-items-center">
+                                                <div class="box box-sm d-flex flex-column flex-sm-row align-items-sm-center flex-grow-1 bg-gray-200 gray-700 font-weight-light ml-60 ml-sm-80">
+                                                    <span class="my-1 my-sm-0"><span class="badge badge-type badge-gray px-1 mr-10">MPT</span> Janice Price</span>
+                                                    <a href="" class="btn btn-yellow btn-sm ml-auto">Edit</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-30">
+                                    <div class="row">
+                                        <div class="col-sm-9 font-11">
+                                            <span class="badge badge-type badge-gray px-1 mr-2">SVLx2</span> Est. Visit Time <strong>1h</strong> <span class="gray-400 no-wrap">(+15min travel time)</span>
+                                            <hr class="my-2">
+                                        </div>
+                                    </div>
+                                    <div class="row gutter-sm mb-1">
+                                        <div class="col-sm-3 gray-400 font-12 d-flex align-items-center order-0 order-sm-1 justify-content-end justify-content-sm-start mb-2 mb-sm-0">
+                                            Ext. 1h 35m
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <div class="d-flex align-items-center">
+                                                <div class="box box-sm d-flex flex-column flex-sm-row align-items-sm-center flex-grow-1 bg-gray-200 gray-700 font-weight-light ml-60 ml-sm-80">
+                                                    <span class="my-1 my-sm-0"><span class="badge badge-type badge-gray px-1 mr-10">SVLx4</span> Janice Price</span>
+                                                    <a href="" class="btn btn-yellow btn-sm ml-auto">Edit</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row gutter-sm mb-1">
+                                        <div class="col-sm-9 pl-sm-30">
+                                            <div class="box box-sm d-flex align-items-center bg-gray-200 subItem gray-700 font-weight-light ml-80 ml-sm-100">
+                                                <span class="typeLink ml-0"></span> Stave Dick
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row gutter-sm mb-1">
+                                        <div class="col-sm-9 pl-sm-30">
+                                            <div class="box box-sm d-flex align-items-center bg-gray-200 subItem gray-700 font-weight-light ml-80 ml-sm-100">
+                                                <span class="typeLink ml-0"></span> John Dick
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row gutter-sm mb-1">
+                                        <div class="col-sm-9 pl-sm-30">
+                                            <div class="box box-sm d-flex align-items-center bg-gray-200 subItem gray-700 font-weight-light ml-80 ml-sm-100">
+                                                <span class="typeLink typeLink-red ml-0"></span> Mike Dick
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="text-center pt-4 pt-sm-0 mb-30 mb-sm-80">
+                                    Note:
+                                    <span class="gray-500">15 minut travel time factor added to estimations.</span>
+                                </div>
+
+                                <div class="box py-30 bg-gray-100 text-center mb-30">
+                                    <div class="mb-30">
+                                        <span class="gray-500">Dispatch Date/Time</span><br> Nov 3
+                                        <span class="gray-500">at</span> 6:40 pm
+                                        <span class="gray-500">(Now)</span>
+                                    </div>
+                                    <div class="gray-500">Estimated Completion</div>
+                                    <div class="font-30 my-2">8:10 pm</div>
+                                    <div class="gray-500 mt-10">(in 1h)</div>
+                                </div>
+                                <a href="" class="btn btn-block btn-green">Create Visit </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

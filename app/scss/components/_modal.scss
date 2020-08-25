@@ -1,6 +1,12 @@
 /* modal
 *******************************************************************/
 
+@include media-breakpoint-down(md) {
+  .modal-lg {
+    max-width: 90vw;
+  }
+}
+
 .modal-content {
   border: 2px solid $gray-800;
 

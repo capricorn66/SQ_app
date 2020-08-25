@@ -10,3 +10,16 @@
     }
 
 }
+
+.box-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    .box {
+        min-width: 660px;
+        .box {
+            min-width: auto;
+        }
+    }
+}
