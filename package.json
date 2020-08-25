@@ -16,7 +16,7 @@
   "dependencies": {
     "bootstrap": "^4.5.2",
     "bootstrap-select": "^1.13.12",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lodash.debounce": "^4.0.8",
     "ripplet.js": "^0.1.14",
     "popper.js": "^1.15.0"
