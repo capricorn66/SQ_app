@@ -43,6 +43,7 @@ module.exports = (env, options) => {
             new CopyPlugin([
                 { from: './app/icomoon/fonts', to: 'fonts' },
                 { from: './app/images', to: 'images' },
+                { from: './app/favicon', to: 'favicon' },
             ]),
             new MiniCssExtractPlugin({
                 filename: devMode ? 'css/[name].css' : 'css/[name].min.css',
