@@ -20,6 +20,10 @@
       sup {
         color: $gray-500;
       }
+      .badge-type {
+        position: relative;
+        top: -3px;
+      }
     }
     .close {
       background-color: lighten($gray-400, 7%);
@@ -47,5 +51,6 @@
   .modal-footer,
   .modal-body {
     background-color: $gray-200;
+    padding: 1.6rem 1rem;
   }
 }
