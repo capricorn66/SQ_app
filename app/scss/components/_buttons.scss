@@ -72,6 +72,10 @@
         box-shadow: none;
         color: white;
     }
+    &.disabled {
+        background: lighten($gray-400, 10%);
+        border-color: lighten($gray-400, 10%);;
+    }
 }
 
 .btn-blue {

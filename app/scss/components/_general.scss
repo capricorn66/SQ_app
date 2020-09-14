@@ -10,7 +10,7 @@ html {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.4em;
     overflow-x: hidden;
     font-weight: 500;
@@ -23,6 +23,14 @@ body {
     background-color: $white;
     color: $gray-800;
 }
+
+.worker-app,
+.dispatcher-app {
+    .tab-content .container-fluid {
+        max-width: 991px;
+    }
+}
+
 
 * {
     outline: 0 !important;
@@ -91,3 +99,9 @@ select.custom-select {
     -moz-appearance: none;
     appearance: none;
 }
+
+label {
+    font-weight: 600;
+}
+
+

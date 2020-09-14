@@ -40,6 +40,20 @@ header {
     .zone {
         color: $gray-400;
     }
+    .avatar {
+        margin-left: 8px;
+        font-size: 30px;
+        color: $gray-400;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+
+    .btn-user {
+        padding: 0;
+        color: $gray-200;
+        font-size: 14px;
+    }
 }
 .user-about {
     background: $gray-300;
@@ -99,11 +113,90 @@ header {
     }
 }
 
+.user-settings {
+    &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 6px 6px 6px;
+        border-color: transparent transparent $white transparent;
+        right: 10px;
+        top: -6px;
+    }
+    position: relative;
+    background: $white;
+    border-radius: 8px;
+    width: calc(100% - 30px);
+    padding: 20px 15px;
+    margin: 15px;
+    h6 {
+        font-weight: 300;
+        color: $gray-500;
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+    .custom-switch {
+        padding: 0;
+        min-height: 34px;
+        .custom-control-input:not(:disabled):active ~ .custom-control-label {
+            &::before {
+                background-color: rgba($app-color-1, 0.25);
+            }
+        }
+
+        .custom-control-input:focus:not(:checked) ~ .custom-control-label {
+            &::before {
+                border-color: rgba($app-color-1, 0.25);
+            }
+        }
+        .custom-control-input:focus ~ .custom-control-label {
+            &::before {
+                box-shadow: 0 0 0 0.2rem rgba($app-color-1, 0.25);
+            }
+        }
+        .custom-control-input:checked ~ .custom-control-label {
+            &::before {
+                background-color: $gray-100;
+                border-color: $gray-400;
+            }
+            &::after {
+                content: "On";
+                background-color: $app-color-1;
+            }
+        }
+        .custom-control-label {
+            display: block;
+            padding: 9px 0;
+            &::before {
+                right: 0;
+                left: auto;
+                width: 65px;
+                height: 30px;
+                background-color: $gray-100;
+                border-color: $gray-400;
+            }
+            &::after {
+                content: "Off";
+                text-align: center;
+                color: $white;
+                right: 13px;
+                left: auto;
+                width: 50px;
+                height: 26px;
+                line-height: 26px;
+            }
+        }
+    }
+}
+
 .user-contact {
     text-align: center;
     color: $gray-400;
+    margin-bottom: 30px;
     .phone {
-        font-size: 24px;
+        font-size: 18px;
         display: block;
         padding: 4px 0;
         color: $gray-700;

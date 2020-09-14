@@ -23,6 +23,8 @@ const htmlOrderList = generateHtml('orderList');
 const htmlPropertyDetails = generateHtml('propertyDetails');
 const htmlNewVisit = generateHtml('newVisit');
 const htmlNewVisitSSO = generateHtml('newVisit_SSO');
+const htmlPondProfile = generateHtml('pondProfile');
+const htmlPondJobCards = generateHtml('pondJobCards');
 
 module.exports = (env, options) => {
 
@@ -65,8 +67,9 @@ module.exports = (env, options) => {
             .concat(htmlOrderList)
             .concat(htmlPropertyDetails)
             .concat(htmlNewVisit)
-            .concat(htmlNewVisitSSO),
-
+            .concat(htmlNewVisitSSO)
+            .concat(htmlPondProfile)
+            .concat(htmlPondJobCards),
 
         optimization: {
             minimizer: [

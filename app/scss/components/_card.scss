@@ -1,0 +1,87 @@
+/* card
+*******************************************************************/
+
+.card {
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    .card-header {
+        background-color: $gray-700;
+        color: $white;
+        padding: 10px;
+        text-align: left;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        strong {
+            font-size: 16px;
+            line-height: 1.2em;
+        }
+        small {
+            font-weight: 300;
+            display: block;
+            font-size: 13px;
+            line-height: 1.2em;
+        }
+        i {
+            font-size: 40px;
+            margin-right: 10px;
+        }
+    }
+    .card-body {
+        background-color: $gray-100;
+        padding: 30px 10px;
+    }
+}
+
+.step {
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 5px;
+    text-align: left;
+    .step-header {
+        position: relative;
+        &.step-active {
+            &::after {
+                position: absolute;
+                background-color: rgba($white,.3);
+                padding: 6px 6px 5px 6px;
+                font-size: 18px;
+                border-radius: 4px;
+                top: 5px;
+                right: 5px;
+                content: "\e909";
+                /* use !important to prevent issues with browser extensions that change fonts */
+                font-family: 'icomoon' !important;
+                speak: none;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+                display: inline-block;
+                vertical-align: middle;
+
+                /* Better Font Rendering =========== */
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+            background-color: $app-color-1;
+            padding-right: 50px;
+        }
+        padding: 10px;
+        background-color: $gray-700;
+        color: $white;
+    }
+    .step-body {
+        padding: 20px 10px;
+        background-color: $gray-200;
+        h4 {
+            margin-bottom: 10px;
+        }
+    }
+
+
+}
+

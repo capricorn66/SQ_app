@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SNOW QUEEN APP</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap&subset=latin-ext" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+<link href="css/app.min.css" rel="stylesheet"></head>
+<body class="worker-app">
+
+    <header>
+
+        <div class="container-fluid">
+            <div class="user-nav">
+                <div class="col-6 py-1 gray-400">
+                    Coquitlam West (Z2)
+                </div>
+                <div class="col-6 py-1 text-right">
+                    <button class="btn btn-user d-inline-flex align-items-center justify-content-end py-10" type="button" data-toggle="collapse" data-target="#collapseMenu" aria-expanded="false" aria-controls="collapseMenu">
+                        Hi, Kevin Smith
+                        <img src="./images/avatar.jpg" alt="Kevin Smith" class="avatar">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapse" id="collapseMenu">
+            <div class="user-settings">
+            <div class="mb-40">
+                <h6>Overview:</h6>
+                <h5>Matthew Dylewski</h5>
+                <div class="gray-600 mb-10">(778) 888 7899</div>
+                <div class="gray-500 font-weight-light">
+                #89 - 15089 149th Street<br>
+                Surrey, British Columbia<br>
+                Canada
+                </div>
+            </div>
+
+            <div class="row mb-40">
+                <div class="col-6">
+                    <h6>Emergency Contact:</h6>
+                    <strong>Iwona D</strong>
+                    <div class="gray-600">(604) 889-9929</div>
+                </div>
+                <div class="col-6 text-right">
+                    <h6>Current Zone Manager:</h6>
+                    <strong>Kevin Smith</strong>
+                    <div class="gray-600">(604)449-8824</div>
+                </div>
+            </div>
+
+            <h6>Current Equipment / Operator Status:</h6>
+            <div class="mb-40">
+                <div class="mb-1">
+                    <div class="d-flex align-items-center">
+                        <div class="box box-sm d-flex flex-column flex-sm-row align-items-sm-center flex-grow-1 bg-gray-200 gray-700 font-weight-light">
+                            <span class="my-1 my-sm-0"><span class="badge badge-type badge-gray px-1 mr-10">SVLx4</span> <strong>Janice Price</strong> (You)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-1">
+                    <div class="pl-sm-30">
+                        <div class="box box-sm d-flex align-items-center bg-gray-200 subItem gray-700 font-weight-light ml-70">
+                            <span class="typeLink ml-0"></span> Stave Dick
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-1">
+                    <div class="pl-sm-30">
+                        <div class="box box-sm d-flex align-items-center bg-gray-200 subItem gray-700 font-weight-light ml-70">
+                            <span class="typeLink ml-0"></span> John Dick
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-1">
+                    <div class="pl-sm-30">
+                        <div class="box box-sm d-flex align-items-center bg-gray-200 subItem gray-700 font-weight-light ml-70">
+                            <span class="typeLink typeLink-red ml-0"></span> Mike Dick
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h6>Application Settings:</h6>
+
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="switch1">
+                <label class="custom-control-label" for="switch1">24/7 Availability</label>
+            </div>
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="switch2">
+                <label class="custom-control-label" for="switch2">Auto Navigation Launcher</label>
+            </div>
+        </div>
+        </div>
+
+        <div class="py-25 text-center">
+            <div class="gray-500">Current Time & Date:</div>
+            <strong class="gray-800">04:12AM - Oct 4th, 2020</strong>
+        </div>
+
+        <div class="container">
+            <nav>
+                <div class="nav-scroll nav-tabs-scroll">
+                    <div class="nav-scroll-container">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a href="" class="nav-link active" id="nav-property-tab" role="tab" aria-controls="nav-property" aria-selected="true">Availability</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="" class="nav-link" id="nav-availability-tab" role="tab" aria-controls="nav-availability" aria-selected="false">Job Cards <span class="badge">4</span></a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="" class="nav-link" id="nav-orders-tab" role="tab" aria-controls="nav-orders" aria-selected="false">Work Overview</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="nav-availability" role="tabpanel" aria-labelledby="nav-orders-tab">
+
+            <div class="container">
+
+                <div class="user-contact">
+                    Emergency? Contact Dispatch:
+                    <span class="phone">Kevin - <strong>604 449-8824</strong></span>
+                </div>
+
+                <h2 class="font-14">Active Time-Block:</h2>
+                <div class="time-block time-block-available">
+                    <div class="time-block-current-time" style="width: 21.31%"></div>
+                    <div class="time-block-body" data-time="Night">
+                        03:00 - 06:00
+                        <small>I'm Available</small>
+                    </div>
+                </div>
+                <div class="clearfix mb-30"></div>
+
+                <h2 class="font-14">Upcoming Time-Blocks:</h2>
+                <div class="time-block time-block-available">
+                    <div class="time-block-body" data-time="Morning">
+                        06:00 - 09:00
+                        <small>I'm Available</small>
+                    </div>
+                </div>
+                <div class="time-block time-block-available">
+                    <div class="time-block-body" data-time="Morning">
+                        09:00 - 12:00
+                        <small>I'm Available</small>
+                    </div>
+                </div>
+                <div class="clearfix mb-30"></div>
+
+                <h2 class="font-14">Next Time-Blocks:</h2>
+                <div class="time-block">
+                    <div class="time-block-body" data-time="Afternoon">
+                        12:00 - 15:00
+                        <small>TAP to make me available</small>
+                    </div>
+                </div>
+                <div class="time-block">
+                    <div class="time-block-body" data-time="Afternoon">
+                        15:00 - 18:00
+                        <small>TAP to make me available</small>
+                    </div>
+                </div>
+                <div class="time-block">
+                    <div class="time-block-body" data-time="Evening">
+                        18:00 - 21:00
+                        <small>TAP to make me available</small>
+                    </div>
+                </div>
+                <div class="time-block time-block-available">
+                    <div class="time-block-body" data-time="Evening">
+                        21:00 - 24:00
+                        <small>I'm Available</small>
+                    </div>
+                </div>
+                <div class="clearfix mb-30"></div>
+
+                <div class="row no-gutters py-10 mb-30 align-items-center">
+                    <div class="col-4">
+                        <a href="" class="btn btn-sm btn-green">Enable All</a>
+                    </div>
+                    <div class="col-4 text-center">
+                        Time-Blocks
+                    </div>
+                    <div class="col-4 text-right">
+                        <a href="" class="btn btn-sm btn-secondary">Cancel All</a>
+                    </div>
+                </div>
+
+                <div class="text-center mb-30">
+                    <h4>Please Note:</h4>
+                    <small class="gray-400">Additional Time-Blocks will appear as time goes on.</small>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+<script type="text/javascript" src="js/vendors~app.min.js"></script><script type="text/javascript" src="js/app.min.js"></script></body>
+</html>
