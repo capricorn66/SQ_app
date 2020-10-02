@@ -27,6 +27,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+i.app-bg-color-1 {
+  padding: 6px 5px 4px;
+  border-radius: 50%;
+}
+
 .icon-snow-removal:before {
   content: "\e90b";
 }

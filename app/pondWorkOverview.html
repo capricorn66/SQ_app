@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SNOW QUEEN APP</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap&subset=latin-ext" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<body class="worker-app">
+
+    <header>
+
+        <div class="container-fluid">
+            <div class="user-nav">
+                <div class="col-6 py-1 gray-400">
+                    Coquitlam West (Z2)
+                </div>
+                <div class="col-6 py-1 text-right">
+                    <button class="btn btn-user d-inline-flex align-items-center justify-content-end py-10" type="button" data-toggle="collapse" data-target="#collapseMenu" aria-expanded="false" aria-controls="collapseMenu">
+                        Hi, Kevin Smith
+                        <img src="./images/avatar.jpg" alt="Kevin Smith" class="avatar">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapse" id="collapseMenu">
+            <div class="user-settings">
+            <div class="mb-40">
+                <h6>Overview:</h6>
+                <h5>Matthew Dylewski</h5>
+                <div class="gray-600 mb-10">(778) 888 7899</div>
+                <div class="gray-500 font-weight-light">
+                #89 - 15089 149th Street<br>
+                Surrey, British Columbia<br>
+                Canada
+                </div>
+            </div>
+
+            <div class="row mb-40">
+                <div class="col-6">
+                    <h6>Emergency Contact:</h6>
+                    <strong>Iwona D</strong>
+                    <div class="gray-600">(604) 889-9929</div>
+                </div>
+                <div class="col-6 text-right">
+                    <h6>Current Zone Manager:</h6>
+                    <strong>Kevin Smith</strong>
+                    <div class="gray-600">(604)449-8824</div>
+                </div>
+            </div>
+
+            <h6>Current Equipment / Operator Status:</h6>
+            <div class="mb-40">
+                <div class="mb-1">
+                    <div class="d-flex align-items-center">
+                        <div class="box box-sm d-flex flex-column flex-sm-row align-items-sm-center flex-grow-1 bg-gray-200 gray-700 font-weight-light">
+                            <span class="my-1 my-sm-0"><span class="badge badge-type badge-gray px-1 mr-10">SVLx4</span> <strong>Janice Price</strong> (You)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-1">
+                    <div class="pl-sm-30">
+                        <div class="box box-sm d-flex align-items-center bg-gray-200 subItem gray-700 font-weight-light ml-70">
+                            <span class="typeLink ml-0"></span> Stave Dick
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-1">
+                    <div class="pl-sm-30">
+                        <div class="box box-sm d-flex align-items-center bg-gray-200 subItem gray-700 font-weight-light ml-70">
+                            <span class="typeLink ml-0"></span> John Dick
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-1">
+                    <div class="pl-sm-30">
+                        <div class="box box-sm d-flex align-items-center bg-gray-200 subItem gray-700 font-weight-light ml-70">
+                            <span class="typeLink typeLink-red ml-0"></span> Mike Dick
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h6>Application Settings:</h6>
+
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="switch1">
+                <label class="custom-control-label" for="switch1">24/7 Availability</label>
+            </div>
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="switch2">
+                <label class="custom-control-label" for="switch2">Auto Navigation Launcher</label>
+            </div>
+        </div>
+        </div>
+
+        <div class="py-25 text-center">
+            <div class="gray-500">Current Time & Date:</div>
+            <strong class="gray-800">04:12AM - Oct 4th, 2020</strong>
+        </div>
+
+        <div class="container">
+            <nav>
+                <div class="nav-scroll nav-tabs-scroll">
+                    <div class="nav-scroll-container">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a href="" class="nav-link" id="nav-property-tab" role="tab" aria-controls="nav-property" aria-selected="false">Availability</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="" class="nav-link" id="nav-availability-tab" role="tab" aria-controls="nav-availability" aria-selected="false">Job Cards <span class="badge">4</span></a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="" class="nav-link active" id="nav-orders-tab" role="tab" aria-controls="nav-orders" aria-selected="true">Work Overview</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="nav-availability" role="tabpanel" aria-labelledby="nav-orders-tab">
+
+            <div class="container gray-400">
+
+                <h6>Upload Images:</h6>
+
+                <p>Use the bulk upload feature to select all images taken during your recent series of visits to validate your jobs as completed.</p>
+
+                <div class="custom-file d-inline-flex w-auto mb-30 btn btn-green">
+                    <input type="file" class="custom-file-input position-absolute" id="inputFile">
+                    <label class="custom-file-label position-relative mb-0" for="inputFile">Upload Job Images</label>
+                </div>
+
+                <h6>Jobs Awaiting Image Verification:</h6>
+                <div class="card mb-10">
+                    <div class="card-header">
+                        <i class="icon-snow-removal mb-auto"></i>
+                        <div class="flex-grow-1">
+                            <strong>Snow Removal</strong>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>
+                                    <small>ATV</small>
+                                </span>
+                                <span class="text-right">
+                                    <small>River Rock Landing</small>
+                                    <small class="gray-400">2385 Marpole Avenue</small>
+                                </span>
+                            </div>
+
+                            <div class="d-flex justify-content-between">
+                                <span class="gray-400 no-wrap">Nov 18, 2020</span>
+                                <span class="text-right">Time: 39min <span class="gray-400 no-wrap">(4:15 pm - 4:45 pm)</span></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-10">
+                    <div class="card-header">
+                        <i class="icon-snow-removal mb-auto"></i>
+                        <div class="flex-grow-1">
+                            <strong>Snow Removal</strong>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>
+                                    <small>ATV</small>
+                                </span>
+                                <span class="text-right">
+                                    <small>River Rock Landing</small>
+                                    <small class="gray-400">2385 Marpole Avenue</small>
+                                </span>
+                            </div>
+
+                            <div class="d-flex justify-content-between">
+                                <span class="gray-400 no-wrap">Nov 18, 2020</span>
+                                <span class="text-right">Time: 39min <span class="gray-400 no-wrap">(4:15 pm - 4:45 pm)</span></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-10">
+                    <div class="card-header">
+                        <i class="icon-snow-removal mb-auto"></i>
+                        <div class="flex-grow-1">
+                            <strong>Snow Removal</strong>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>
+                                    <small>ATV</small>
+                                </span>
+                                <span class="text-right">
+                                    <small>River Rock Landing</small>
+                                    <small class="gray-400">2385 Marpole Avenue</small>
+                                </span>
+                            </div>
+
+                            <div class="d-flex justify-content-between">
+                                <span class="gray-400 no-wrap">Nov 18, 2020</span>
+                                <span class="text-right">Time: 39min <span class="gray-400 no-wrap">(4:15 pm - 4:45 pm)</span></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-right">
+                    <small>Total Job Time:</small><br/>
+                    <span class="gray-800">3 hours 9 min</span>
+                </p>
+
+                <h6>Validated & Awaiting Payout:</h6>
+                <div class="card mb-10">
+                    <div class="card-header bg-gray-300">
+                        <i class="icon-snow-removal mb-auto gray-700"></i>
+                        <div class="flex-grow-1 gray-900">
+                            <div class="d-flex justify-content-between mb-2 align-items-end">
+                                <strong>Snow Removal</strong>
+                                <i class="icon-check font-16 white app-bg-color-1 mr-0"></i>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>
+                                    <small>ATV</small>
+                                </span>
+                                <span class="text-right">
+                                    <small>River Rock Landing</small>
+                                    <small class="gray-500">2385 Marpole Avenue</small>
+                                </span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="gray-500 no-wrap">Nov 18, 2020</span>
+                                <span class="text-right">Time: 39min <span class="gray-500 no-wrap">(4:15 pm - 4:45 pm)</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-10">
+                    <div class="card-header bg-gray-300">
+                        <i class="icon-snow-removal mb-auto gray-700"></i>
+                        <div class="flex-grow-1 gray-900">
+                            <div class="d-flex justify-content-between mb-2 align-items-end">
+                                <strong>Snow Removal</strong>
+                                <i class="icon-check font-16 white app-bg-color-1 mr-0"></i>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>
+                                    <small>ATV</small>
+                                </span>
+                                <span class="text-right">
+                                    <small>River Rock Landing</small>
+                                    <small class="gray-500">2385 Marpole Avenue</small>
+                                </span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="gray-500 no-wrap">Nov 18, 2020</span>
+                                <span class="text-right">Time: 39min <span class="gray-500 no-wrap">(4:15 pm - 4:45 pm)</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-10">
+                    <div class="card-header bg-gray-300">
+                        <i class="icon-snow-removal mb-auto gray-700"></i>
+                        <div class="flex-grow-1 gray-900">
+                            <div class="d-flex justify-content-between mb-2 align-items-end">
+                                <strong>Snow Removal</strong>
+                                <i class="icon-check font-16 white app-bg-color-1 mr-0"></i>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>
+                                    <small>ATV</small>
+                                </span>
+                                <span class="text-right">
+                                    <small>River Rock Landing</small>
+                                    <small class="gray-500">2385 Marpole Avenue</small>
+                                </span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="gray-500 no-wrap">Nov 18, 2020</span>
+                                <span class="text-right">Time: 39min <span class="gray-500 no-wrap">(4:15 pm - 4:45 pm)</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between mb-30">
+                    <p>
+                        <small>Upcoming Payout</small><br>
+                        <span class="gray-800">$156.50 <span class="gray-400">@ $30/hour</span></span>
+                    </p>
+                    <p class="text-right">
+                        <small>Total Job Time:</small><br/>
+                        <span class="gray-800">3 hours 9 min</span>
+                    </p>
+                </div>
+
+                <div class="text-center mb-40">
+                    <small>Upcoming Payout</small>
+                    <h5>November 21st, 2020</h5>
+                </div>
+
+                <h6>Payout History:</h6>
+                <div class="card mb-10">
+                    <div class="card-header bg-gray-100">
+                        <div class="flex-grow-1 gray-700">
+                            <div class="mb-2">
+                                <strong>November 14th, 2020</strong>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>
+                                    <small>Total Payout:</small>
+                                    <strong>$546.43</strong>
+                                </span>
+                                <span class="text-center">
+                                    <small>Total Jobs:</small>
+                                    <strong>11</strong>
+                                </span>
+                                <span class="text-right">
+                                    <small>Total Job Time:</small>
+                                    <strong>12h 17min</strong>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-10">
+                    <div class="card-header bg-gray-100">
+                        <div class="flex-grow-1 gray-700">
+                            <div class="mb-2">
+                                <strong>November 14th, 2020</strong>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>
+                                    <small>Total Payout:</small>
+                                    <strong>$546.43</strong>
+                                </span>
+                                <span class="text-center">
+                                    <small>Total Jobs:</small>
+                                    <strong>11</strong>
+                                </span>
+                                <span class="text-right">
+                                    <small>Total Job Time:</small>
+                                    <strong>12h 17min</strong>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-10">
+                    <div class="card-header bg-gray-100">
+                        <div class="flex-grow-1 gray-700">
+                            <div class="mb-2">
+                                <strong>November 14th, 2020</strong>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>
+                                    <small>Total Payout:</small>
+                                    <strong>$546.43</strong>
+                                </span>
+                                <span class="text-center">
+                                    <small>Total Jobs:</small>
+                                    <strong>11</strong>
+                                </span>
+                                <span class="text-right">
+                                    <small>Total Job Time:</small>
+                                    <strong>12h 17min</strong>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

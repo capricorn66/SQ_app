@@ -84,3 +84,14 @@
 .custom-select {
 
 }
+
+.custom-file.btn {
+    .custom-file-label {
+        &::after {
+            display: none;
+        }
+        background: transparent;
+        border: 0;
+        color: inherit;
+    }
+}
