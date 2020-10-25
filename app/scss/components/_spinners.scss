@@ -1,0 +1,130 @@
+.loading {
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 32px 0;
+		z-index: 111;
+		background: rgba($black, .7);
+	}
+	.loader {
+		position: fixed;
+		display: block;
+		z-index: 112;
+		top: calc(50% - 16px);
+		left: calc(50% - 16px);
+	}
+}
+
+.loader {
+	display: none;
+}
+
+.loaded {
+	> .loader,
+	> .spinner {
+		display: none;
+	}
+}
+
+.spinner {
+	&.spinner-hide {
+		opacity: 0;
+	}
+
+	&:not(.spinner-hide) {
+		transition-delay: 2s;
+		@include transition(opacity .3s linear .4s)
+	}
+
+	span {
+		display: block;
+		color: rgba($white,.7);
+		width: 200px;
+		transform: translateX(-50%);
+		position: relative;
+		left: 16px;
+		text-align: center;
+		padding-top: 16px;
+		line-height: 1.4em;
+	}
+}
+
+// SVG styles.
+.spinner svg {
+	animation: 2s linear infinite svg-animation;
+	max-width: 100px;
+	width: 32px;
+	height: 32px;
+}
+
+
+// Circle styles.
+.spinner svg circle {
+	animation: 1.8s linear infinite both circle-animation;
+	display: block;
+	fill: transparent;
+	stroke-linecap: round;
+	stroke-dasharray: 283;
+	stroke-dashoffset: 280;
+	stroke-width: 5px;
+	transform-origin: 50% 50%;
+	stroke: $spinner-color;
+}
+
+@media all and (-ms-high-contrast: none) {
+	*::-ms-backdrop, .spinner {
+		display: inline-block;
+		width: 32px;
+		height: 32px;
+		vertical-align: text-bottom;
+		border-right-color: transparent !important;
+		border-radius: 50%;
+		animation: spinner .75s linear infinite;
+		border: 2px solid $spinner-color;
+	}
+	*::-ms-backdrop, .spinner svg {
+		display: none;
+	}
+}
+
+// SVG animation.
+@keyframes svg-animation {
+	0% {
+		transform: rotateZ(0deg);
+	}
+	100% {
+		transform: rotateZ(360deg)
+	}
+}
+
+// Circle animation.
+@keyframes circle-animation {
+	0%,
+	15% {
+		stroke-dashoffset: 225;
+		transform: rotate(0deg);
+	}
+
+	50%,
+	75% {
+		stroke-dashoffset: 90;
+		transform: rotate(45deg);
+	}
+
+	100% {
+		stroke-dashoffset: 225;
+		transform: rotate(360deg);
+	}
+}
+
+// Rotating border
+@keyframes spinner {
+	to {
+		transform: rotate(360deg);
+	}
+}
