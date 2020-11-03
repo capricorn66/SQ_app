@@ -66,6 +66,18 @@
             </div>
         </div>
 
+
+        <ul id="sortable">
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+        </ul>
+
+
         <h2>Active Time-Block:</h2>
         <div class="time-block time-block-available">
             <div class="time-block-current-time" style="width: 21.31%"></div>
@@ -169,6 +181,15 @@
 
 
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+
+            $( "#sortable" ).sortable();
+
+        }, false);
+    </script>
+
 </body>
 
 </html>
