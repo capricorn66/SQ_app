@@ -2,30 +2,7 @@
 /* CSS Document */
 
 // Bootstrap v4.3.1 (https://getbootstrap.com/)
-// Required
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
-
-// Optional
-@import "~bootstrap/scss/root";
-@import "~bootstrap/scss/reboot";
-@import "~bootstrap/scss/type";
-@import "~bootstrap/scss/grid";
-@import "~bootstrap/scss/buttons";
-@import "~bootstrap/scss/transitions";
-@import "~bootstrap/scss/badge";
-@import "~bootstrap/scss/close";
-@import "~bootstrap/scss/utilities";
-@import "~bootstrap/scss/forms";
-@import "~bootstrap/scss/modal";
-@import "~bootstrap/scss/custom-forms";
-@import "~bootstrap/scss/toasts";
-@import "~bootstrap/scss/tables";
-@import "~bootstrap/scss/dropdown";
-@import "~bootstrap/scss/images";
-@import "~bootstrap/scss/alert";
-@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/bootstrap";
 
 // DesignSystem: plugins-custom
 @import "~bootstrap-select/sass/bootstrap-select";
@@ -39,6 +16,7 @@
 @import "components/header";
 @import "components/buttons";
 @import "components/general";
+@import "components/custom-forms";
 @import "components/main";
 @import "components/icons";
 @import "components/badge";
